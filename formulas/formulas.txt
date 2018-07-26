@@ -1,0 +1,29 @@
+FORMULA 1: 
+FORMULA 2: 
+FORMULA 3: 
+FORMULA 4: w\textsubscript{o} = w\textsubscript{t}r/(r+1) = 0.293lb/sec\hfill(4)
+FORMULA 5: w\textsubscript{f} = w\textsubscript{t}/(r+1) = 0.117lb/sec\hfill(5)
+FORMULA 6: w\textsubscript{t} = w\textsubscript{o} + w\textsubscript{f}\hfill(6)
+FORMULA 7: A\textsubscript{t} = w\textsubscript{t}/P\textsubscript{t} \sqrt{R T\textsubscript{t}/\gamma g_c}\hfill(7)
+FORMULA 8: T\textsubscript{t} = T\textsubscript{c} \left [ \frac{1}{1+ \frac{\gamma-1} {2}}  \right ] \hfill (8)
+FORMULA 9: T\textsubscript{t} = (.909)(T\textsubscript{c}) \hfill(9)
+FORMULA 10: T (\degree R) = T (\degree F) + 460 \hfill(10)
+FORMULA 11: P_t = P_c \left [ 1+\frac{\gamma-1}{2} \right ] ^{-\frac{\gamma}{\gamma-1}} \hfill(11)
+FORMULA 12: P_t = (.564)(P_c)\hfill(12)
+FORMULA 13: M_e^2 = \frac{2}{\gamma-1} \left [ (\frac{P_c}{P_{atm}})^{\frac{\gamma-1}{\gamma}} - 1  \right ] \hfill(13)
+FORMULA 14: A_e = \frac{A_t}{M_e}  \left [ \frac{1 + \frac{\gamma-1}{2} M_e^2}{(\gamma+1)/2} \right ]  ^{\frac{\gamma+1}{2(\gamma-1)}} \hfill (14)
+FORMULA 15: A_e = A_t (A_e/A_t) \hfill (15)
+FORMULA 16: T_e = T_c (T_e/T_c) \hfill (16)
+FORMULA 17: D_t = \sqrt{4A_t/\pi} \hfill (17)
+FORMULA 18: D_e = \sqrt{4A_e/\pi} \hfill (18)
+FORMULA 19: L* = V_c/A_t \hfill (19)
+FORMULA 20: A_c = \pi D_c^2/4 \hfill (20)
+FORMULA 21: V_c = A_c L_c + convergent \ volume \hfill (21)
+FORMULA 21 (for small conbustion chambers): V_c = 1.1(A_c L_c) \hfill (21)
+FORMULA 22: S = PD/2t_w \hfill (22)
+FORMULA 23: t_w = PD/16000 \hfill (23)
+FORMULA 24: Q = q A = w_w c_p (T - T_i) \hfill (24)
+FORMULA 25: w = C_d A \sqrt{2g \rho \Delta P} \hfill (25)
+FORMULA 26: w = C_d \sqrt{2g (\Delta P/ \rho)} \hfill (26)
+FORMULA 27:
+FORMULA 28:

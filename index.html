@@ -30,6 +30,10 @@
 			body {
 				background: #f3f3f3;
 			}
+			hr {
+				border-bottom: 0;
+    			border: 1px dashed #dcdcdc;
+			}
 
 			.container {
 				width: 780px;
@@ -39,6 +43,28 @@
 
 			h1, h2 {
 				margin-top: 3rem;
+			}
+
+			/* COVER */
+			.cover {
+				margin: 6rem 0;
+				min-height: 100vh;
+			}
+
+			.cover h1 {
+				font-size: 180%;
+    			margin: 0;
+			}
+
+			.cover h2 {
+				font-size: 110%;
+			    margin: 0.4rem 0;
+			    color: #616161;
+			}
+
+			.book-info {
+				text-align: right;
+				margin-top: 15rem;
 			}
 
 			/* FIGURE */
@@ -103,7 +129,12 @@
 	<body>
 
 		<div class="container">
-			<div class="">
+
+			<div class="cover">
+				<h1>How to design, build and test small liquid-fuel rocket engines</h1>
+				<h2>ROCKETLAB / CHINA LAKE, CALIF.</h2>
+
+				<div class="book-info">
 				<p>
 					<small>
 						Copyright 1967 by Leroy J. Krzycki<br />
@@ -111,10 +142,14 @@
 						First Printing: March 1967<br />
 						Second Printing: March 1971<br />
 						First WWW Edition: June 1996<br />
+						Second WWW Edition: October 2018<br />
 						SBN 9600-1980-4
 					</small>
 				</p>
 			</div>
+			</div>
+
+			<hr>
 
 			<h3 id="contents">Contents</h3>
 
@@ -169,10 +204,6 @@
 				
 				<!-- CH 1.0 -->
 				<h1 id="introduction">Introduction</h1>
-				<small>
-					<p>How to design, build and test small liquid-fuel rocket engines</p>
-					<p>ROCKETLAB / CHINA LAKE, CALIF.</p>
-				</small>
 
 				<h2>Notice</h2>
 				

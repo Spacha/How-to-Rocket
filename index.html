@@ -22,6 +22,7 @@
 	<head>
 		<title>Title</title>
 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
 		<style>
@@ -50,7 +51,7 @@
 			/* COVER */
 			.cover {
 				margin: 6rem 0;
-				min-height: 100vh;
+				max-height: 100vh;
 			}
 
 			.cover h1 {
@@ -72,12 +73,14 @@
 			/* FIGURE */
 
 			.fig {
-				display: inline-block;
+				display: block;
+				text-align: center;
 			}
 
 			.fig img {
 				max-height: 300px;
 			}
+
 			.fig .caption {
 				color: #999;
 				font-style: italic;
@@ -88,12 +91,22 @@
 				font-weight: bold;
 			}
 
+			@media(max-width: 708px) {
+				.fig img {
+					width: 75%;
+					max-height: none;
+				}
+			}
+
 			/* FORMULA */
+
 			div.formula {
 				text-align: right;
+				max-width: 100%;
 			}
 			div.formula img {
 				max-width: 100%;
+    			width: 500px;
 			}
 
 			p.formula-explanation {
@@ -103,6 +116,19 @@
 				padding-left: 3rem;
 				border-left: 4px solid #ccc;
 			}
+
+			@media(max-width: 708px) {
+				div.formula {
+					text-align: left;
+					overflow-x: auto;
+				}
+				div.formula img {
+					width: 450px;
+					max-width: none;
+				}
+			}
+
+			/* BACT TO TOP */
 
 			div.back-to-top {
 				background: #eee;
@@ -114,6 +140,7 @@
 				bottom: 10px;
 				right: 10px;
 			}
+
 			div.back-to-top a {
 				text-decoration: none;
 				padding: 0.5rem 1rem;

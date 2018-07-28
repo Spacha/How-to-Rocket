@@ -23,48 +23,48 @@ h1, h2 {
 	margin-top: 3rem;
 }
 
+
 /* COVER */
 .cover {
 	margin: 6rem 0;
 	max-height: 100vh;
 }
-
-.cover h1 {
-	font-size: 180%;
-	margin: 0;
-}
-
-.cover h2 {
-	font-size: 110%;
-    margin: 0.4rem 0;
-    color: #616161;
-}
+	.cover h1 {
+		font-size: 180%;
+		margin: 0;
+	}
+	.cover h2 {
+		font-size: 110%;
+	    margin: 0.4rem 0;
+	    color: #616161;
+	}
 
 .book-info {
 	text-align: right;
 	margin-top: 15rem;
 }
 
+
 /* FIGURE */
 
 .fig {
 	display: block;
 	text-align: center;
+	margin: 1.5rem 0;
 }
-
-.fig img {
-	max-height: 300px;
-}
+	.fig img {
+		max-height: 300px;
+	}
 
 .fig .caption {
 	color: #999;
 	font-style: italic;
 	font-size: 0.9rem;
 }
-.fig .caption .fig-text{
-	color: #000;
-	font-weight: bold;
-}
+	.fig .caption .fig-text{
+		color: #000;
+		font-weight: bold;
+	}
 
 @media(max-width: 708px) {
 	.fig img {
@@ -73,16 +73,17 @@ h1, h2 {
 	}
 }
 
+
 /* FORMULA */
 
 div.formula {
 	text-align: right;
 	max-width: 100%;
 }
-div.formula img {
-	max-width: 100%;
-	width: 500px;
-}
+	div.formula img {
+		max-width: 100%;
+		width: 500px;
+	}
 
 p.formula-explanation {
 	font-weight: bold;
@@ -103,6 +104,15 @@ p.formula-explanation {
 	}
 }
 
+
+/* TABLE */
+
+div.responsive-table {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+
 /* BACT TO TOP */
 
 div.back-to-top {
@@ -115,16 +125,9 @@ div.back-to-top {
 	bottom: 10px;
 	right: 10px;
 }
-
-div.back-to-top a {
-	text-decoration: none;
-	padding: 0.5rem 1rem;
-	display: block;
-	color: #888;
-}
-
-/* TABLE */
-div.responsive-table {
-	max-width: 100%;
-	overflow-x: auto;
-}
+	div.back-to-top a {
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		display: block;
+		color: #888;
+	}

@@ -66,6 +66,11 @@ h1, h2 {
 		font-weight: bold;
 	}
 
+a.figure-link {
+	text-decoration: none;
+	color: #828282;
+}
+
 @media(max-width: 708px) {
 	.fig img {
 		width: 75%;
@@ -93,6 +98,11 @@ p.formula-explanation {
 	border-left: 4px solid #ccc;
 }
 
+a.formula-link {
+	text-decoration: none;
+	color: #828282;
+}
+
 @media(max-width: 708px) {
 	div.formula {
 		text-align: left;
@@ -110,6 +120,11 @@ p.formula-explanation {
 div.responsive-table {
 	max-width: 100%;
 	overflow-x: auto;
+}
+
+a.table-link {
+	text-decoration: none;
+	color: #828282;
 }
 
 

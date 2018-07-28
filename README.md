@@ -1,5 +1,9 @@
 # How-to-Rocket
 
+The content IS NOT mine. All the hard work is done by the original writer Leroy J. Krzycki, and Daniel Risacher, who digitized this in 1996.
+
+See Dan's website: https://risacher.org
+
 <small>
 Copyright 1967 by Leroy J. Krzycki<br />
 Printed in the United States of America<br />

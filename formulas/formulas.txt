@@ -46,7 +46,34 @@ FORMULA 36: A_e = 3.65 A_t = 3.655 \times 0.0444 = 0.162\ in^2 \hfill (36)
 FORMULA 37: D_e = (4A_e/\pi)^{1/2} = 0.2065^{1/2} = 0.4555\ in \hfill (37)
 FORMULA 38: V_c = L* A_t = 60 \times 0.0444 = 2.67\ in^3 \hfill (38)
 FORMULA 39: V_c = 1.1(A_c L_c) \hfill (39)
-FORMULA 40:
-FORMULA 41:
-FORMULA 42:
-FORMULA 43:
+FORMULA 40: L_c = V_c/(1.1 \times 1.13) = 2.67/1.245 = 2.15\ in \hfill (40)
+FORMULA 41: t_w = PD/16000 = 300 \times 1.2/16000 = 0.0225\ in \hfill (41)
+FORMULA 42: A = \pi (D_c + 2t_w)(L_c) + area\ of\ nozzle\ cone \hfill (42)
+FORMULA 43: A = 9.4\ in^2 + area\ of\ nozzle\ cone \hfill (43)
+FORMULA 44: A = 1.1 \times 9.4 = 10.35\ in^2 \hfill (44)
+FORMULA 45: Q = q A = 3 \times 10.35 = 31\ Btu/sec \hfill (45)
+FORMULA 46: w_w = Q/\Delta T \hfill (46)
+FORMULA 47: w_w = 31/40 = 0.775\ lb/sec \hfill (47)
+FORMULA 48: v_w = w_w/\rho A \hfill (48)
+FORMULA 49: A = (\pi/4) (D_2^2 - D_1^2) \hfill (49)
+FORMULA 50: D_1 = D_c + 2t_w \hfill (50)
+FORMULA 51: D_2 = \sqrt{\frac{4w_w}{v_w \rho \pi} + D_1^2} \hfill (51)
+FORMULA 52: D_2 = 0.0151^{1/2} = 0.123\ ft = 1.475\ in \hfill (52)
+FORMULA 53: D_2 - D_1 = 0.085\ in \hfill (53)
+FORMULA 54: w_f = 0.022\ lb/sec = 1.32\ lb/min \hfill (54)
+FORMULA 55: A = w_f/C_d \times (2 g \rho \Delta P)^{1/2} \hfill (55)
+FORMULA 56: A = \frac{0.022}{0.7 \times 6430} = 0.0000049\ ft^2 \hfill (56)
+FORMULA 57: A = 0.000706\ in^2 \hfill (57)
+FORMULA 58: D = (4A\pi )^{1/2} = 0.0009^{1/2} = 0.030\ in \hfill (58)
+FORMULA 59: D = 0.00045^{1/2} = 0.021\ in  \hfill (59)
+FORMULA 60: \rho_2 = \rho_1 (P_2/P_1) = 2.26\ lb/ft^3  \hfill (60)
+FORMULA 61: A = w_o/ \rho v_o \hfill (61)
+FORMULA 62: A = \frac{0.055}{2.26 \times 200} = 0.0001217\ ft^2 \hfill (62)
+FORMULA 63: A = 0.0175\ in^2 \hfill (63)
+FORMULA 64: D = 0.00558^{1/2} = 0.0747\ in \hfill (64)
+FORMULA 65:
+FORMULA 66:
+FORMULA 67:
+FORMULA 68:
+FORMULA 69:
+FORMULA 70:

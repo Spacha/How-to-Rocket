@@ -19,11 +19,11 @@ FORMULA 18: D_e = \sqrt{4A_e/\pi} \hfill (18)
 FORMULA 19: L* = V_c/A_t \hfill (19)
 FORMULA 20: A_c = \pi D_c^2/4 \hfill (20)
 FORMULA 21: V_c = A_c L_c + convergent \ volume \hfill (21)
-FORMULA 21 (for small conbustion chambers): V_c = 1.1(A_c L_c) \hfill (21)
-FORMULA 22: S = PD/2t_w \hfill (22)
-FORMULA 23: t_w = PD/16000 \hfill (23)
-FORMULA 24: Q = q A = w_w c_p (T - T_i) \hfill (24)
-FORMULA 25: w = C_d A \sqrt{2g \rho \Delta P} \hfill (25)
-FORMULA 26: v = C_d \sqrt{2g (\Delta P/ \rho)} \hfill (26)
-FORMULA 27:
+FORMULA 22: V_c = 1.1(A_c L_c) \hfill (22)
+FORMULA 23: S = PD/2t_w \hfill (23)
+FORMULA 24: t_w = PD/16000 \hfill (24)
+FORMULA 25: Q = q A = w_w c_p (T - T_i) \hfill (25)
+FORMULA 26: w = C_d A \sqrt{2g \rho \Delta P} \hfill (26)
+FORMULA 27: v = C_d \sqrt{2g (\Delta P/ \rho)} \hfill (27)
 FORMULA 28:
+FORMULA 29:

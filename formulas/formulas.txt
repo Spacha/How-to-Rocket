@@ -24,6 +24,6 @@ FORMULA 22: S = PD/2t_w \hfill (22)
 FORMULA 23: t_w = PD/16000 \hfill (23)
 FORMULA 24: Q = q A = w_w c_p (T - T_i) \hfill (24)
 FORMULA 25: w = C_d A \sqrt{2g \rho \Delta P} \hfill (25)
-FORMULA 26: w = C_d \sqrt{2g (\Delta P/ \rho)} \hfill (26)
+FORMULA 26: v = C_d \sqrt{2g (\Delta P/ \rho)} \hfill (26)
 FORMULA 27:
 FORMULA 28:

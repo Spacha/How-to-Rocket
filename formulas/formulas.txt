@@ -71,7 +71,7 @@ FORMULA 61: A = w_o/ \rho v_o \hfill (61)
 FORMULA 62: A = \frac{0.055}{2.26 \times 200} = 0.0001217\ ft^2 \hfill (62)
 FORMULA 63: A = 0.0175\ in^2 \hfill (63)
 FORMULA 64: D = 0.00558^{1/2} = 0.0747\ in \hfill (64)
-FORMULA 65:
+FORMULA 65: t_w = PD/2S \hfill (65)
 FORMULA 66:
 FORMULA 67:
 FORMULA 68:

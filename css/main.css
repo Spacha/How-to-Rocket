@@ -123,6 +123,43 @@ div.responsive-table {
 	overflow-x: auto;
 }
 
+table.table {
+	border-collapse: collapse;
+
+	margin-bottom: 1.2rem;
+	border: 1px solid #cecece;
+}
+	table.table thead {
+		text-align: left;
+	}
+	table.table thead tr th {
+		padding: 0.4rem 0.9rem;
+		border-bottom: 1px dashed #cecece;
+	}
+		table.table thead tr th:not(:last-child) {
+			border-right: 1px dashed #cecece;
+		}
+	table.table tbody tr td {
+		padding: 0.15rem 0.8rem;
+	}
+		table.table tbody tr:first-child td {
+			padding-top: 0.8rem;
+		}
+		table.table tbody tr td:first-child {
+			padding-left: 0.8rem;
+		}
+		table.table tbody tr td:not(:last-child) {
+			border-right: 1px dashed #cecece;
+		}
+		table.table tbody tr:last-child td {
+			padding-bottom: 0.8rem;
+		}
+
+table.full-width {
+	width: 100%;
+	min-width: 640px;
+}
+
 a.table-link {
 	text-decoration: none;
 	color: #828282;
@@ -147,3 +184,24 @@ div.back-to-top {
 		display: block;
 		color: #888;
 	}
+
+
+/* COLUMNS */
+
+.left-column {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+.right-column {
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 830px) {
+	.left-column, .right-column {
+		float: none;
+		width: auto;
+	}
+}

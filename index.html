@@ -74,7 +74,7 @@
 						<li><a href="#combustion-chamber">Combustion Chamber</a></li>
 						<li><a href="#chamber-wall-thickness">Chamber Wall Thickness</a></li>
 						<li><a href="#engine-cooling">Engine Cooling</a></li>
-						<li><a href="#hear-transfer">Heat Transfer</a></li>
+						<li><a href="#heat-transfer">Heat Transfer</a></li>
 						<li><a href="#materials">Materials</a></li>
 						<li><a href="#injectors">Injectors</a></li>
 					</ol>
@@ -101,7 +101,7 @@
 				<li><a href="#list-of-suppliers">List of Suppliers</a></li>
 				<li> <a href="#conversion-factors">Conversion Factors</a></li>
 
-				<li><a href="#appendix">Appendix</a>
+				<li><a href="#additions">Additions</a>
 					<ol>
 						<li><a href="#additions-and-corrections">Additions and Corrections</a></li>
 						<li><a href="#other-notes">Other Notes</a></li>
@@ -207,7 +207,8 @@
 				liquid as the fuel. They give good performance, the combustion flame is readily
 				visible, and their high combustion temperature presents an adequate design challenge
 				to the amateur builder. The propellants are used in the Atlas missile and the Saturn
-				space booster. In these systems, however, liquid rather than gaseous oxygen is used
+				space booster [see <a href="#additions-and-corrections">Additions and Corrections</a>].
+				In these systems, however, liquid rather than gaseous oxygen is used
 				as the oxidizer.</p>
 
 				<h4>TABLE I</h4>
@@ -373,6 +374,8 @@
 				<div id="formula-4" class="formula"><img src="formulas/formula-4.png" alt="formula-4"></div>
 				<div id="formula-5" class="formula"><img src="formulas/formula-5.png" alt="formula-5"></div>
 				<div id="formula-6" class="formula"><img src="formulas/formula-6.png" alt="formula-6"></div>
+
+				<p>[see <a href="#additions-and-corrections">Additions and Corrections</a>]</p>
 
 				<!-- CH 2.2 -->
 				<h2 id="propellant-properties">Propellant Properties</h2>
@@ -738,7 +741,7 @@
 				</ol>
 				
 				<!-- CH 3.5 -->
-				<h2 id="hear-transfer">Heat Transfer</h2>
+				<h2 id="heat-transfer">Heat Transfer</h2>
 
 				<p>The largest part of the heat transferred from the hot chamber gases to the
 				chamber walls is by convection. The amount of heat transferred by conduction is
@@ -749,7 +752,8 @@
 				damage the wall material or by raising the wall temperature on the liquid coolant
 				side so as to vaporize the liquid next to the wall. The consequent failure is
 				caused because of the sharp temperature rise in the wall caused by excessive heat
-				transfer to the boiling coolant.</p>
+				transfer to the boiling coolant
+				[see <a href="#additions-and-corrections">Additions and Corrections</a>].</p>
 
 				<p>In water-cooled chambers the transferred heat is absorbed by the water. The water
 				must have an adequate heat capacity to prevent boiling of the water at any point in
@@ -1807,7 +1811,8 @@
 					does not apply to electrical instrumentation wherein a transducer is
 					located on the test stand and an electrical readout (such as a meter)
 					is located at the operator's station (this type of instrumentation is
-					very expensive and is beyond the reach of most amateurs).</li>
+					very expensive and is beyond the reach of most amateurs
+					[see <a href="#additions-and-corrections">Additions and Corrections</a>]).</li>
 
 					<li>Warning signals should be given prior to tests (or whenever gas
 					cylinder valves are open) to notify personnel that the area is
@@ -2561,6 +2566,113 @@
 						</tbody>
 					</table>
 				</div>
+
+				<!-- CH 15.0 -->
+				<h1 id="additions">Additions</h1>
+
+				<!-- CH 15.1 -->
+				<h2 id="additions-and-corrections">Additions and Corrections</h2>
+
+				<ul>
+					<li>The Atlas is no longer a "missile" but has been converted into a "space
+					launch vehicle".</li>
+					
+					<li>The calculation in the <a href="#propellant-choice">Propellant Choice</a>
+					section assumes that there are no losses; i.e., that the "maximum theoretical"
+					I<sub>sp</sub> will be that which is achieved. There are numerous loss terms not
+					accounted for; hence the flowrate given is incorrect.</li>
+					
+					<li>Modern launch vehicles operate fuel rich as stated; however it is not due to a
+					desire to reduce the combustion temperature. Rather, the kinetic losses
+					(losses due to departure from full shifting equilibrium) are a maximum at
+					stoichiometric; the prudent designer therefore selects a mixture ratio "off
+					stoichiometric" in order to minimize the kinetic losses.</li>
+					
+					<li>The <a href="#safety">Safety</a> section, asserts that electrical
+					instrumentation wherein a transducer is located on the test stand and an
+					electrical readout is located on the operator's station is too expensive for
+					most amateurs. This is no longer the case. Actuated valves, pressure
+					transducers, etc. and analog-to-digital capture systems for personal computers
+					are very reasonable in price. Furthermore, a computer based system can provide
+					a complete sensor log for the entire run, that will be extremely valuable in
+					diagnosing failure and evaluating performance.</li>
+					
+					<li>In the <a href="#example">example calculation</a>, I think there may be
+					arithmetic errors in the calculation of the coolant flow gap. Readers are
+					strongly encouraged to redo all calculations for themselves.</li>
+
+					<li>
+						<p><strong>According to John F. Cox [sac10361@saclink.csus.edu]:</strong></p>
+						<p>There is a small technical error in the <a href="#heat-transfer">Heat Transfer</a>
+						section of the amateur rocket designer's text. At the end of this section
+						the author advises that:</p>
+
+							<blockquote>"Material failure is usually caused by either raising the wall
+							temperature on the gas side so as to weaken, melt, or damage the wall
+							material or by raising the wall temperature on the liquid coolant side
+							so as to vaporize the liquid next to the wall. The consequent failure is
+							caused because of the sharp temperature rise in the wall caused by
+							excessive heat transfer to the boiling coolant."</blockquote>
+
+							<p>Boiling is usually a good thing from the standpoint of heat
+							transfer. The author has it right that boiling usually increases the
+							heat transfer. Increased heat transfer, however, results in lowered
+							temperature. Think about that for a minute and it will become
+							obvious.</p>
+
+							<p>The problem with boiling in this application results from something
+							that is called alternately film boiling, jacket boiling, or <i>Liedenfrost</i>
+							boiling. The boiling rate becomes so intense that a layer of vapor is
+							established between the hot wall and the cool liquid. The heat transfer
+							properties of boiling liquid are really wonderful. The heat transfer
+							properties of gaseous vapor really suck. Once the vapor barrier is
+							established, whatever it is that is being cooled will likely melt.</p>
+
+					</li>
+
+				<!-- CH 15.2 -->
+				<h2 id="other-notes">Other Notes</h2>
+
+				<p>Reprinted with permission.</p>
+
+				<p><strong>Daniel Risacher (1st www edition):</strong></p>
+				<blockquote>
+					<p>This book has been out of print and very hard to find for many years. For this
+					reason, I decided to undertake the task of putting it into electronic media for
+					wider dissemination. If you need to contact me about this book, please email me,
+					Daniel Risacher, <u>magnus@alum.mit.edu</u>. However, I wish to reiterate that I am not the
+					author of this book, nor am I an expert on rockets. This book was written by Leroy
+					Krzycki, who, when I contacted him in 1995, had been retired for some time.</p>
+
+					<p>The book was scanned from a copy provided to me by the generosity and foresight
+					of Wayne Gramlich of Sun. Numerous errors were introduced by the scanning and OCR
+					process that I and other volunteers removed by hand. Special thanks goes to Jim
+					Glass of Rocketdyne for his outstanding efforts.</p>
+				</blockquote>
+
+				<p><strong>Miika Sikala (2nd www edition):</strong></p>
+				<blockquote>
+					<p>In 2018, 22 years after the first WWW edition, I decided to contribute and
+					rewrite the whole book. It all started when I was studying for my personal
+					project but reading the plain html-version was a bit tough job, especially with
+					mobile device. So I started rewriting this with new styles. Of course, it
+					eventually resulted a full overhaul including re-rendering all equations and
+					redrawing the figures. I also checked equations and figures for errors and fixed
+					them. And yeah, fixed <i>quite</i> many typos.</p>
+
+					<p>I'm very grateful to Mr. Krzycki and Mr. Risacher for everything they have
+					done to help future rocket engineers.</p>
+
+					<p>If you have feedback or you have found errors, please contact me at:
+					<u>miikasikala96@gmail.com</u>.</p>
+				</blockquote>
+
+				<div class="cover-image-container">
+					<img src="img/cover.jpg" alt="cover">
+				</div>
+
+				<p class="thank-you"><i>Thank You.</i></p>
+
 			</div>
 
 			<div class="back-to-top">

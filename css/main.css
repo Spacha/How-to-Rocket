@@ -45,6 +45,14 @@ h1, h2 {
 	margin-top: 15rem;
 }
 
+div.cover-image-container {
+	width: 600px;
+	margin: 3rem auto;
+}
+	div.cover-image-container img {
+		width: 100%;
+	}
+
 
 /* FIGURE */
 
@@ -204,4 +212,10 @@ div.back-to-top {
 		float: none;
 		width: auto;
 	}
+}
+
+.thank-you {
+	color: #888; 
+	text-align: center;
+	margin: 6rem 0 2rem 0;
 }

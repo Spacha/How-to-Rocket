@@ -48,6 +48,7 @@ h1, h2 {
 div.cover-image-container {
 	width: 600px;
 	margin: 3rem auto;
+	max-width: 100%;
 }
 	div.cover-image-container img {
 		width: 100%;

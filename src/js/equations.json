@@ -1,0 +1,7 @@
+{
+	"general_fraction": "\\frac{a_i}{1+x}",
+
+	"of_ratio": 		"\\tag{1} O/F = w_o/w_f",
+	"isp": 				"\\tag{2} I_{sp} = \\frac{\\text{thrust}}{\\text{total propellant weight flow rate}}",
+	"w_t": 				{"US": "\\tag{3} w_t = F/I_{sp} = 100/244 = 0.41 \\text{ lb}/\\text{sec}", "SI": "\\tag{3} w_t = F/I_{sp} = 445/996 = 0.45 \\text{ kgms}^{-2}/\\text{s}"}
+}

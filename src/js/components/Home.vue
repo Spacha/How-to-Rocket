@@ -488,11 +488,18 @@
 				</table>
 			</div>
 
-
-			<p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
-			standard can be determined from<br />
-			ρ<sub>2</sub> = ρ<sub>1</sub> (P<sub>2</sub>/P<sub>1</sub>)(T<sub>1</sub>/T<sub>2</sub>),
-			where P<sub>1</sub> = 14.7 psi, T<sub>1</sub> = 68 °F, ρ<sub>1</sub> = 0.083</i></p>
+			<span v-if="unitSystem=='US'">
+				<p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
+				standard can be determined from</i><br />
+				ρ<sub>2</sub> = ρ<sub>1</sub> (P<sub>2</sub>/P<sub>1</sub>)(T<sub>1</sub>/T<sub>2</sub>),
+				<i>where</i> P<sub>1</sub> = 14.7 psi, T<sub>1</sub> = 68 °F, ρ<sub>1</sub> = 0.083 lb/ft<sup>3</sup>.</i></p>
+			</span>
+			<span v-else>
+				<p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
+				standard can be determined from</i><br />
+				ρ<sub>2</sub> = ρ<sub>1</sub> (P<sub>2</sub>/P<sub>1</sub>)(T<sub>1</sub>/T<sub>2</sub>),
+				<i>where</i> P<sub>1</sub> = 101.3 kPa, T<sub>1</sub> = 20 °C, ρ<sub>1</sub> = 1.330 kg/m<sup>3</sup>.</i></p>
+			</span>
 
 			<!-- CH 3.0 -->
 			<h1 id="design-equations">Design equations</h1>

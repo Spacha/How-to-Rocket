@@ -29,8 +29,8 @@ export default {
 		
 	}),
 	methods: {
-		kakka: () => {
-			alert('kakka')
+		test: () => {
+			alert('test')
 		}
 	},
 	computed: {

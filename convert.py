@@ -1,6 +1,10 @@
 def ft_m(ft):       return ft*0.3048
 def m_ft(m):        return m/0.3048
 
+def F_C(F):         return (F - 32)/1.8
+def C_F(C):         return (C*1.8) + 32
+
+
 def N_lbf(N):       return N*0.2248089431
 def lbf_N(lbf):     return lbf/0.2248089431
 
@@ -25,3 +29,4 @@ print( 0.293 * lb ) # print( 444.82216152547716 / 2392.82259799032 * 2.5 / 3.5 )
 print( 0.117 * lb )
 '''
 print( 44.5 * lb / ft3 )
+print( F_C(68) )

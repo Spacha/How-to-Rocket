@@ -386,12 +386,13 @@
 			propellant burned per second. Therefore
 			</span>
 			<span v-else>1.4 MPa with a thrust of 445 N. At these conditions the propellant performance, from
-			<a class="figure-link" href="#figure-5">Figure 5</a>, is 996 <span v-katex="equations['kgms-1']"></span>. Therefore
+			<a class="figure-link" href="#figure-5">Figure 5</a>, is 244 N of thrust per kg of propellant burned per second. Therefore
 			</span></p>
 
 			<!-- W<sub>t</sub> = F/I<sub>sp</sub> = 100/244 = 0.41 lb/sec	(3) -->
 			<!-- <div id="formula-3" class="formula"><img src="formulas/formula-3.png" alt="formula-3"></div> -->
 			<div v-katex:display="equations['w_t'][unitSystem]" alt="w_t"></div>
+			<div v-if="unitSystem=='SI'" v-katex:display="equations['m_t']" alt="m_t"></div>
 
 			<div id="figure-5" class="fig">
 				<div class="img"><img src="img/fig-5.png" alt="figure-5" /></div>
@@ -402,12 +403,16 @@
 			<p>Since the maximum I<sub>sp</sub> mixture ratio (<i>r</i>) for oxygen/gasoline is
 			2.5, we have:</p>
 
-			<!-- W<sub>o</sub> = W<sub>t</sub> r/(r + 1) = O. 293 lb/sec	(4)<br />
-			W<sub>f</sub> = W<sub>t</sub>/(r + 1) = 0.117 lb/sec		(5)<br />
-			W<sub>t</sub> = W<sub>o</sub> + W<sub>f</sub>		(6) -->
-			<div id="formula-4" class="formula"><img src="formulas/formula-4.png" alt="formula-4"></div>
-			<div id="formula-5" class="formula"><img src="formulas/formula-5.png" alt="formula-5"></div>
-			<div id="formula-6" class="formula"><img src="formulas/formula-6.png" alt="formula-6"></div>
+			<span v-if="unitSystem=='US'">
+				<div v-katex:display="equations['w_o']" alt="w_o"></div>
+				<div v-katex:display="equations['w_f']" alt="w_f"></div>
+				<div v-katex:display="equations['w_t2']" alt="w_t2"></div>
+			</span>
+			<span v-else>
+				<div v-katex:display="equations['m_o']" alt="m_o"></div>
+				<div v-katex:display="equations['m_f']" alt="m_f"></div>
+				<div v-katex:display="equations['m_t2']" alt="m_t2"></div>
+			</span>
 
 			<p>[see <a href="#additions-and-corrections">Additions and Corrections</a>]</p>
 
@@ -439,9 +444,9 @@
 						</tr>
 						<tr>
 							<td>Molecular Weight</td>
-							<td>32</td>
-							<td>34.04</td>
-							<td>114</td>
+							<td>32 u</td>
+							<td>34.04 u</td>
+							<td>114 u</td>
 						</tr>
 						<tr>
 							<td>Color</td>
@@ -467,11 +472,17 @@
 							<td>toxic</td>
 							<td>mild</td>
 						</tr>
-						<tr>
+						<tr v-if="unitSystem == 'US'">
 							<td>Density</td>
-							<td>0.083 lb/ft3</td>
-							<td>48 lb/ft3</td>
-							<td>44.5 lb/ft3</td>
+							<td>0.083 lb/ft<sup>3</sup></td>
+							<td>48 lb/ft<sup>3</sup></td>
+							<td>44.5 lb/ft<sup>3</sup></td>
+						</tr>
+						<tr v-else>
+							<td>Density</td>
+							<td>1.330 kg/m<sup>3</sup></td>
+							<td>769 kg/m<sup>3</sup></td>
+							<td>713 kg/m<sup>3</sup></td>
 						</tr>
 					</tbody>
 				</table>

@@ -1,5 +1,7 @@
 # How-to-Rocket
 
+* **[LINK TO THE BOOK](https://spacha.github.io/How-to-Rocket)**
+
 The content IS NOT mine. All the hard work is done by the original writer Leroy J. Krzycki, and Daniel Risacher, who digitized this in 1996.
 
 See Dan's website: https://risacher.org

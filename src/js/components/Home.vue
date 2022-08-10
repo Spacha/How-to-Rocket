@@ -95,7 +95,7 @@
 			from the nozzle or makes a gun recoil when fired.</p>
 
 			<div id="figure-1" class="fig">
-				<div class="img"><div class="img"><img src="img/fig-1.png" alt="figure-1" /></div></div>
+				<div class="img"><div class="img"><img src="img/fig-1-transparent.svg" alt="figure-1" style="max-width: 510px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 1</span> Typical Rocket Motor</span>
 			</div>
 
@@ -109,7 +109,7 @@
 			gases enter the nozzle.</p>
 
 			<div id="figure-2" class="fig">
-				<div class="img"><img src="img/fig-2.png" alt="figure-2" /></div>
+				<div class="img"><div class="img"><img src="img/fig-2-transparent.svg" alt="figure-2" style="max-width: 510px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 2</span> DeLaval Nozzle</span>
 			</div>
 

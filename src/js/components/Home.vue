@@ -355,14 +355,15 @@
 			the mixture ratio is allowed to vary.</p>
 
 			<div id="figure-3" class="fig">
-				<div class="img"><img src="img/fig-3.png" alt="figure-3" /></div>
+				<!--<div class="img"><img src="img/fig-3.png" alt="figure-3" /></div>-->
+				<div class="img"><div class="img"><img v-bind:src="`img/fig-3-${unitSystem}.svg`" alt="figure-3" style="max-width: 620px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 3</span>
 				Flame temperature versus chamber pressure at stoichiometric mixture ratio.
 				</span>
 			</div>
 
 			<div id="figure-4" class="fig">
-				<div class="img"><img src="img/fig-4.png" alt="figure-4" /></div>
+				<div class="img"><div class="img"><img v-bind:src="`img/fig-4-${unitSystem}.svg`" alt="figure-4" style="max-width: 620px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 4</span>
 				Flame temperature versus mixture ratio at constant chamber pressure.</span>
 			</div>

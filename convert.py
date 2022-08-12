@@ -28,5 +28,11 @@ print( 244 * lbf / lb )
 print( 0.293 * lb ) # print( 444.82216152547716 / 2392.82259799032 * 2.5 / 3.5 )
 print( 0.117 * lb )
 '''
-print( 44.5 * lb / ft3 )
-print( F_C(68) )
+#print( 44.5 * lb / ft3 )
+#print( F_C(68) )
+
+print( round( F_C( 6000 ), 3) )
+print( round( F_C( 5000 ), 3) )
+print( round( F_C( 4000 ), 3) )
+print( round( F_C( 3000 ), 3) )
+print( round( F_C( 2000 ), 3) )

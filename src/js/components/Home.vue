@@ -510,7 +510,7 @@
 			<a class="figure-link" href="#figure-6">Figure 6</a>.</p>
 
 			<div id="figure-6" class="fig">
-				<div class="img"><img src="img/fig-6.png" alt="figure-6" /></div>
+				<div class="img"><div class="img"><img src="img/fig-6.svg" alt="figure-6" style="max-width: 510px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 6</span>
 				Motor Design Configuration</span>
 			</div>

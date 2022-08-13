@@ -528,27 +528,35 @@
 
 
 			<p class="formula-explanation">
-				where R = gas constant, given by R = R*/M. R* is the universal gas
-				constant equal to 1545.32 ft-lb/lb°R, and M is the molecular weight of the gas.
-				The molecular weight of the hot gaseous products of combustion of gaseous
-				oxygen/hydrocarbon fuel is about 24, so that R is about 65 ft-lb/lb°R.
+				<span v-if="unitSystem=='US'">
+					where R = gas constant, given by R = R<sup>*</sup>/M. R<sup>*</sup> is the universal gas
+					constant equal to 1545.32 ft-lb/lb°R, and M is the molecular weight of the gas.
+					The molecular weight of the hot gaseous products of combustion of gaseous
+					oxygen/hydrocarbon fuel is about 24, so that R is about 65 ft-lb/lb°R.
+				</span>
+				<span v-else>
+					where R = gas constant, given by R = R<sup>*</sup>/M. R<sup>*</sup> is the universal gas
+					constant equal to 8.31446 J/(mol &#183; K), and M is the molecular weight of the gas.
+					The molecular weight of the hot gaseous products of combustion of gaseous
+					oxygen/hydrocarbon fuel is about 24, so that R is about 350 J/(kg &#183; K).
+				</span>
 			</p>
 
-			<p>Gamma, (ɣ), is the ratio of gas specific heats and is a thermodynamic variable
+			<p>Gamma, (𝛾), is the ratio of gas specific heats and is a thermodynamic variable
 			which the reader is encouraged to read about elsewhere
 			(see <a href="#bibliography">Bibliography</a>). Gamma is about 1.2 for the products
 			of combustion of gaseous oxygen/hydrocarbon fuel.</p>
 
-			<p>g<sub>c</sub> is a constant relating to the earth's gravitation and is equal to
-			32.2 ft/sec/sec.</p>
+			<span v-if="unitSystem=='US'"><p>g<sub>c</sub> is a constant relating to the earth's gravitation and is equal to
+			32.2 ft/sec/sec.</p></span>
 
 			<p>For further calculations the reader may consider the following as constants
 			whenever gaseous oxygen/hydrocarbon propellants are used:</p>
 			
 			<p>
-				R = 65 ft-lb/lb°R<br /> 
-				ɣ = 1.2<br />
-				g<sub>c</sub> = 32.2 ft/sec<sup>2</sup>
+				<span v-if="unitSystem=='US'">R = 65 ft-lb/lb°R</span><span v-else>R = 350 J/(kg &#183; K)</span><br />
+				𝛾 = 1.2<br />
+				<span v-if="unitSystem=='US'">g<sub>c</sub> = 32.2 ft/sec<sup>2</sup></span>
 			</p>
 
 			<p>T<sub>t</sub> is the temperature of the gases at the nozzle throat. The gas
@@ -560,7 +568,7 @@
 			<div id="formula-8" class="formula"><img src="formulas/formula-8.png" alt="formula-8"></div>
 
 
-			<p>For ɣ = 1.2</p>
+			<p>For 𝛾 = 1.2</p>
 
 			<!-- Tt = (.909)(Tc)			(9) -->
 			<div id="formula-9" class="formula"><img src="formulas/formula-9.png" alt="formula-9"></div>
@@ -578,7 +586,7 @@
 			<!-- Pt = Pc(1+((gamma)-1)/2)^((gamma)/((gamma)-1))		(11) -->
 			<div id="formula-11" class="formula"><img src="formulas/formula-11.png" alt="formula-11"></div>
 
-			<p>For ɣ = 1.2</p>
+			<p>For 𝛾 = 1.2</p>
 
 			<!-- Pt = (.564)(Pc)		(12) -->
 			<div id="formula-12" class="formula"><img src="formulas/formula-12.png" alt="formula-12"></div>
@@ -610,7 +618,7 @@
 
 			<h4>Table III</h4>
 
-			<p>Nozzle Parameters for Various chamber pressures, ɣ = 1.2, P<sub>atm</sub> = 14.7 psi</p>
+			<p>Nozzle Parameters for Various chamber pressures, 𝛾 = 1.2, P<sub>atm</sub> = 14.7 psi</p>
 			
 			<!-- TABLE 3 -->
 			<div id="table-3" class="responsive-table">
@@ -1002,7 +1010,7 @@
 
 			<p>The nozzle throat area is given by Equation (<a class="formula-link" href="#formula-7">7</a>)</p>
 
-			<!-- <p>A<sub>t</sub> = (w/P<sub>t</sub>)(RT<sub>t</sub>/ɣg<sub>c</sub>)<sup>1/2</sup></p> -->
+			<!-- <p>A<sub>t</sub> = (w/P<sub>t</sub>)(RT<sub>t</sub>/𝛾g<sub>c</sub>)<sup>1/2</sup></p> -->
 			<div id="formula-33" class="formula"><img src="formulas/formula-33.png" alt="formula-33"></div>
 
 			<div id="formula-34" class="formula"><img src="formulas/formula-34.png" alt="formula-34"></div>

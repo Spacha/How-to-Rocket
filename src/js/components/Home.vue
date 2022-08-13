@@ -396,7 +396,7 @@
 			<div v-if="unitSystem=='SI'" v-katex:display="equations['m_t']" alt="m_t"></div>
 
 			<div id="figure-5" class="fig">
-				<div class="img"><img src="img/fig-5.png" alt="figure-5" /></div>
+				<div class="img"><div class="img"><img v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`" alt="figure-5" style="max-width: 620px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 5</span>
 				I<sub>sp</sub> performance of hydrocarbon fuels with gaseous oxygen.</span>
 			</div>
@@ -523,11 +523,12 @@
 			Assuming perfect gas law theory:</p>
 
 			<!-- At = Wt/Pt SQRT(R Tt/(gamma)g_c)	(7) -->
-			<div id="formula-7" class="formula"><img src="formulas/formula-7.png" alt="formula-7"></div>
+			<!-- <div id="formula-7" class="formula"><img src="formulas/formula-7.png" alt="formula-7"></div> -->
+			<div v-katex:display="equations['A_t'][unitSystem]" alt="A_t"></div>
 
 
 			<p class="formula-explanation">
-				where R = gas constant, given by R = R_bar/M. R_bar is the universal gas
+				where R = gas constant, given by R = R*/M. R* is the universal gas
 				constant equal to 1545.32 ft-lb/lb°R, and M is the molecular weight of the gas.
 				The molecular weight of the hot gaseous products of combustion of gaseous
 				oxygen/hydrocarbon fuel is about 24, so that R is about 65 ft-lb/lb°R.

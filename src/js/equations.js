@@ -24,4 +24,7 @@ export const getEquations = () => ({
 "m_o": 				String.raw`\tag{4} \dot{m_o} = \dot{m_t}r/(r + 1) = 0.133 \operatorname{kg}/\operatorname{s}`,
 "m_f": 				String.raw`\tag{5} \dot{m_f} = \dot{m_t}/(r + 1) = 0.053 \operatorname{kg}/\operatorname{s}`,
 "m_t2": 			String.raw`\tag{6} \dot{m_t} = \dot{m_o} + \dot{m_f}`,
+
+"A_t": 				{ "US": String.raw`\tag{7} A_t = \frac{\dot{w_t}}{P_t}\sqrt{RT/\gamma g_c}`,
+					  "SI": String.raw`\tag{7} A_t = \frac{\dot{m_t}}{P_t}\sqrt{RT/\gamma}`},
 })

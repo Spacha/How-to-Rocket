@@ -94,10 +94,14 @@
 			This is the same phenomenon which pushes a garden hose backward as water squirts
 			from the nozzle or makes a gun recoil when fired.</p>
 
-			<div id="figure-1" class="fig">
-				<div class="img"><div class="img"><img src="img/fig-1-transparent.svg" alt="figure-1" style="max-width: 510px;" /></div></div>
+			<Figure name="Figure 1" src="img/fig-1.svg" caption="Typical Rocket Motor" />
+
+			<!--<div id="figure-1" class="fig">
+				<div class="img">
+					<a href="img/fig-1.svg" target="_blank"><img src="img/fig-1.svg" alt="figure-1" style="max-width: 510px;" /></a>
+				</div>
 				<span class="caption"><span class="fig-text">Figure 1</span> Typical Rocket Motor</span>
-			</div>
+			</div>-->
 
 			<p>A typical rocket motor consists of the combustion chamber, the nozzle, and the
 			injector, as shown in <a class="figure-link" href="#figure-1">Figure 1</a>. The
@@ -108,10 +112,7 @@
 			chamber must also be of sufficient length to ensure complete combustion before the
 			gases enter the nozzle.</p>
 
-			<div id="figure-2" class="fig">
-				<div class="img"><div class="img"><img src="img/fig-2-transparent.svg" alt="figure-2" style="max-width: 510px;" /></div></div>
-				<span class="caption"><span class="fig-text">Figure 2</span> DeLaval Nozzle</span>
-			</div>
+			<Figure name="Figure 2" src="img/fig-2.svg" caption="DeLaval Nozzle" />
 
 			<p>The function of the nozzle is to convert the chemical-thermal energy generated
 			in the combustion chamber into kinetic energy, The nozzle converts the slow moving,
@@ -354,19 +355,32 @@
 			temperature varies when combustion chamber pressure is held at a constant value and
 			the mixture ratio is allowed to vary.</p>
 
-			<div id="figure-3" class="fig">
-				<!--<div class="img"><img src="img/fig-3.png" alt="figure-3" /></div>-->
-				<div class="img"><div class="img"><img v-bind:src="`img/fig-3-${unitSystem.toLowerCase()}.svg`" alt="figure-3" style="max-width: 620px;" /></div></div>
+			<Figure name="Figure 3"
+				v-bind:src="`img/fig-3-${unitSystem.toLowerCase()}.svg`"
+				caption="Flame temperature versus chamber pressure at stoichiometric mixture ratio."
+				:max-width="620"
+			/>
+			<!--<div id="figure-3" class="fig">
+				<div class="img">
+					<img v-bind:src="`img/fig-3-${unitSystem.toLowerCase()}.svg`" alt="figure-3" style="max-width: 620px;" />
+				</div>
 				<span class="caption"><span class="fig-text">Figure 3</span>
 				Flame temperature versus chamber pressure at stoichiometric mixture ratio.
 				</span>
-			</div>
+			</div>-->
 
-			<div id="figure-4" class="fig">
-				<div class="img"><div class="img"><img v-bind:src="`img/fig-4-${unitSystem.toLowerCase()}.svg`" alt="figure-4" style="max-width: 620px;" /></div></div>
+			<Figure name="Figure 4"
+				v-bind:src="`img/fig-4-${unitSystem.toLowerCase()}.svg`"
+				caption="Flame temperature versus mixture ratio at constant chamber pressure."
+				:max-width="620"
+			/>
+			<!--<div id="figure-4" class="fig">
+				<div class="img">
+					<img v-bind:src="`img/fig-4-${unitSystem.toLowerCase()}.svg`" alt="figure-4" style="max-width: 620px;" />
+				</div>
 				<span class="caption"><span class="fig-text">Figure 4</span>
 				Flame temperature versus mixture ratio at constant chamber pressure.</span>
-			</div>
+			</div>-->
 
 
 			<p>The thrust developed per <span v-if="unitSystem=='US'">pound</span><span v-else>weight unit (newton)</span> of total propellant burned per second is known as
@@ -396,7 +410,9 @@
 			<div v-if="unitSystem=='SI'" v-katex:display="equations['m_t']" alt="m_t"></div>
 
 			<div id="figure-5" class="fig">
-				<div class="img"><div class="img"><img v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`" alt="figure-5" style="max-width: 620px;" /></div></div>
+				<<div class="img">
+					<img v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`" alt="figure-5" style="max-width: 620px;" />
+				</div>
 				<span class="caption"><span class="fig-text">Figure 5</span>
 				I<sub>sp</sub> performance of hydrocarbon fuels with gaseous oxygen.</span>
 			</div>
@@ -510,7 +526,9 @@
 			<a class="figure-link" href="#figure-6">Figure 6</a>.</p>
 
 			<div id="figure-6" class="fig">
-				<div class="img"><div class="img"><img src="img/fig-6.svg" alt="figure-6" style="max-width: 510px;" /></div></div>
+				<div class="img">
+					<img src="img/fig-6.svg" alt="figure-6" style="max-width: 510px;" />
+				</div>
 				<span class="caption"><span class="fig-text">Figure 6</span>
 				Motor Design Configuration</span>
 			</div>
@@ -942,11 +960,10 @@
 			recommended.</p>
 
 			<div id="figure-7" class="fig">
-				<div class="img"><img src="img/fig-7.png" alt="figure-7" /></div>
+				<div class="img"><img src="img/fig-7.svg" alt="figure-7" style="max-width: 510px;" /></div>
 				<span class="caption"><span class="fig-text">Figure 7</span> Fuel injectors for
-				Amatuer Rocket Engines</span>
+				Amateur Rocket Engines</span>
 			</div>
-
 
 			<!-- CH 4.0 -->
 			<h1 id="example-design-calculation">Example design calculation</h1>
@@ -1309,7 +1326,7 @@
 			engine will operate at high pressure and high temperature.</p>
 
 			<div id="figure-8" class="fig">
-				<div class="img"><div class="img"><img src="img/fig-8.png" alt="figure-8" /></div></div>
+				<div class="img"><div class="img"><img src="img/fig-8.svg" alt="figure-8" style="max-width: 510px;" /></div></div>
 				<span class="caption"><span class="fig-text">Figure 8</span> Assembly drawing of
 				small liquid-fuel rocket engine. (1) injector assembly, (2) O-ring, (3) liquid
 				fuel, (4) gaseous oxygen (5) engine mount, (6) coolant, (7) fuel spray nozzle,
@@ -2741,6 +2758,7 @@
 		<BottomSticky :unitSystem="unitSystem" v-on:switch-units="switchUnits" />
 	</ul>
 	</div>
+
 </template>
 <script>
 
@@ -2749,6 +2767,7 @@ import { getEquations } from './../equations'
 export default {
 	data: () => ({
 		unitSystem: 'SI',
+		fullscreenImage: '',
 		equations: {}
 	}),
 	methods: {

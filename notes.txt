@@ -1,0 +1,24 @@
+SVG figures:
+    If the figure frame is the same width(?), in fig 1 and fig 2 they are 887px, then the figure max-width can be set to be the same, 510px.
+    If not, then they should be scaled so that the ratio stay sthe same -> font and stroke size in the figures will stay consistent between figures.
+
+    One idea would also be to use interactive or at least JS rendered SVG figures -> easy to only change the text when switching between unit systems (especially on charts). Look for example in rockets.test.
+
+    Image width: 510px, font size: 24px
+    Image width: 620px, font size: 24 * (620 / 510) = 19.7px
+
+Unit conversions:
+    65 ft-lb / (lb * R) => 65 [J / ft-lb] * ft-lb / ([kg / lb] * lb * [K / R] * R)
+
+    8.314472 / (24 / 1000) = 346.4
+    65 ft-lb / (lb * R) = 88.13 J / (lb * R) = 194.29 J / (kg * R) = 349.7 J / (kg * K)
+
+    => 65 * 1.3558 * 2.2046 * 1.8
+
+    ft-lb/J = 0.73756
+    lb/kg   = 2.20462262
+    R/K     = 1.8
+
+    J/ft-lb = 1.3558
+    kg/lb   = 0.45359237
+    K/R     = 0.5555556

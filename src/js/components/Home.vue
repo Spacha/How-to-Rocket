@@ -417,7 +417,7 @@
 				I<sub>sp</sub> performance of hydrocarbon fuels with gaseous oxygen.</span>
 			</div>
 			
-			<p>Since the maximum I<sub>sp</sub> mixture ratio (<i>r</i>) for oxygen/gasoline is
+			<p>Since the maximum <i>I<sub>sp</sub></i> mixture ratio (<i>r</i>) for oxygen/gasoline is
 			2.5, we have:</p>
 
 			<span v-if="unitSystem=='US'">
@@ -508,14 +508,14 @@
 			<span v-if="unitSystem=='US'">
 				<p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
 				standard can be determined from</i><br />
-				ρ<sub>2</sub> = ρ<sub>1</sub> (P<sub>2</sub>/P<sub>1</sub>)(T<sub>1</sub>/T<sub>2</sub>),
-				<i>where</i> P<sub>1</sub> = 14.7 psi, T<sub>1</sub> = 68 °F, ρ<sub>1</sub> = 0.083 lb/ft<sup>3</sup>.</i></p>
+				<i>ρ<sub>2</sub></i> = <i>ρ<sub>1</sub></i> (<i>P<sub>2</sub></i>/<i>P<sub>1</sub></i>)(<i>T<sub>1</sub></i>/<i>T<sub>2</sub></i>),
+				<i>where</i> <i>P<sub>1</sub></i> = 14.7 psi, <i>T<sub>1</sub></i> = 68 °F, <i>ρ<sub>1</sub></i> = 0.083 lb/ft<sup>3</sup>.</i></p>
 			</span>
 			<span v-else>
 				<p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
 				standard can be determined from</i><br />
-				ρ<sub>2</sub> = ρ<sub>1</sub> (P<sub>2</sub>/P<sub>1</sub>)(T<sub>1</sub>/T<sub>2</sub>),
-				<i>where</i> P<sub>1</sub> = 101.3 kPa, T<sub>1</sub> = 20 °C, ρ<sub>1</sub> = 1.330 kg/m<sup>3</sup>.</i></p>
+				<i>ρ<sub>2</sub></i> = <i>ρ<sub>1</sub></i> (<i>P<sub>2</sub></i>/<i>P<sub>1</sub></i>)(<i>T<sub>1</sub></i>/<i>T<sub>2</sub></i>),
+				<i>where</i> <i>P<sub>1</sub></i> = 101.3 kPa, <i>T<sub>1</sub></i> = 20 °C, <i>ρ<sub>1</sub></i> = 1.330 kg/m<sup>3</sup>.</i></p>
 			</span>
 
 			<!-- CH 3.0 -->
@@ -544,7 +544,6 @@
 			<!-- <div id="formula-7" class="formula"><img src="formulas/formula-7.png" alt="formula-7"></div> -->
 			<div v-katex:display="equations['A_t'][unitSystem]" alt="A_t"></div>
 
-
 			<p class="formula-explanation">
 				<span v-if="unitSystem=='US'">
 					where R = gas constant, given by R = R<sup>*</sup>/M. R<sup>*</sup> is the universal gas
@@ -565,7 +564,7 @@
 			(see <a href="#bibliography">Bibliography</a>). Gamma is about 1.2 for the products
 			of combustion of gaseous oxygen/hydrocarbon fuel.</p>
 
-			<span v-if="unitSystem=='US'"><p>g<sub>c</sub> is a constant relating to the earth's gravitation and is equal to
+			<span v-if="unitSystem=='US'"><p><i>g<sub>c</sub></i> is a constant relating to the earth's gravitation and is equal to
 			32.2 ft/sec/sec.</p></span>
 
 			<p>For further calculations the reader may consider the following as constants
@@ -577,37 +576,41 @@
 				<span v-if="unitSystem=='US'">g<sub>c</sub> = 32.2 ft/sec<sup>2</sup></span>
 			</p>
 
-			<p>T<sub>t</sub> is the temperature of the gases at the nozzle throat. The gas
+			<p><i>T<sub>t</sub></i> is the temperature of the gases at the nozzle throat. The gas
 			temperature at the nozzle throat is less than in the combustion chamber due to loss
 			of thermal energy in accelerating the gas to the local speed of sound
 			(Mach number = 1) at the throat. Therefore</p>
 
 			<!-- Tt = Tc (1/(1+((gamma)-1)/2))	(8) -->
-			<div id="formula-8" class="formula"><img src="formulas/formula-8.png" alt="formula-8"></div>
-
+			<!-- <div id="formula-8" class="formula"><img src="formulas/formula-8.png" alt="formula-8"></div> -->
+			<div v-katex:display="equations['T_t']" alt="T_t"></div>
 
 			<p>For 𝛾 = 1.2</p>
 
 			<!-- Tt = (.909)(Tc)			(9) -->
-			<div id="formula-9" class="formula"><img src="formulas/formula-9.png" alt="formula-9"></div>
+			<!-- <div id="formula-9" class="formula"><img src="formulas/formula-9.png" alt="formula-9"></div> -->
+			<div v-katex:display="equations['T_t_val']" alt="T_t_val"></div>
 
-			<p>T<sub>c</sub> is the combustion chamber flame temperature in degrees Rankine
-			(°R), given by</p>
+			<p><i>T<sub>c</sub></i> is the combustion chamber flame temperature in <span v-if="unitSystem == 'US'">degrees Rankine
+			(°R)</span><span v-else>degrees Celsius (°C)</span>, given by</p>
 
 			<!-- T (degR) = T (°F) + 460	(10) -->
-			<div id="formula-10" class="formula"><img src="formulas/formula-10.png" alt="formula-10"></div>
+			<!-- <div id="formula-10" class="formula"><img src="formulas/formula-10.png" alt="formula-10"></div> -->
+			<div v-katex:display="equations['T_c_val'][unitSystem]" alt="T_c_val"></div>
 
-			<p>P<sub>t</sub> is the gas pressure at the nozzle throat. The pressure at the
+			<p><i>P<sub>t</sub></i> is the gas pressure at the nozzle throat. The pressure at the
 			nozzle throat is less than in the combustion chamber due to acceleration of the gas
 			to the local speed of sound (Mach number = 1) at the throat. Therefore</p>
 
 			<!-- Pt = Pc(1+((gamma)-1)/2)^((gamma)/((gamma)-1))		(11) -->
-			<div id="formula-11" class="formula"><img src="formulas/formula-11.png" alt="formula-11"></div>
+			<!-- <div id="formula-11" class="formula"><img src="formulas/formula-11.png" alt="formula-11"></div> -->
+			<div v-katex:display="equations['P_t']" alt="P_t"></div>
 
 			<p>For 𝛾 = 1.2</p>
 
 			<!-- Pt = (.564)(Pc)		(12) -->
-			<div id="formula-12" class="formula"><img src="formulas/formula-12.png" alt="formula-12"></div>
+			<!-- <div id="formula-12" class="formula"><img src="formulas/formula-12.png" alt="formula-12"></div> -->
+			<div v-katex:display="equations['P_t_val']" alt="P_t_val"></div>
 
 			<p>The hot gases must now be expanded in the diverging section of the nozzle to
 			obtain maximum thrust. The pressure of these gases will decrease as energy is used
@@ -619,16 +622,18 @@
 			Mach number at the nozzle exit is given by a perfect gas expansion expression</p>
 
 			<!-- Me^2 = 2/((gamma)-1)((Pc/Patm)^(((gamma)-1)/gamma) - 1)		(13) -->
-			<div id="formula-13" class="formula"><img src="formulas/formula-13.png" alt="formula-13"></div>
+			<!-- <div id="formula-13" class="formula"><img src="formulas/formula-13.png" alt="formula-13"></div> -->
+			<div v-katex:display="equations['M_e2']" alt="M_e2"></div>
 
-			<p>P<sub>c</sub> is the pressure in the combustion chamber and P<sub>atm</sub> is
-			atmospheric pressure, or 14.7 psi.</p>
+			<p><i>P<sub>c</sub></i> is the pressure in the combustion chamber and <i>P<sub>atm</sub></i> is
+			atmospheric pressure, or <span v-if="unitSystem == 'US'">14.7 psi</span><span v-else>101.3 kPa</span>.</p>
 
 			<p>The nozzle exit area corresponding to the exit Mach number resulting from the
 			choice of chamber pressure is given by</p>
 
 			<!-- Ae = At/Me * ((1 + ((gamma)-1)/2 Me^2)/(((gamma)+1)/2))^(((gamma)+1)/2((gamma)-1))	(14) -->
-			<div id="formula-14" class="formula"><img src="formulas/formula-14.png" alt="formula-14"></div>
+			<!-- <div id="formula-14" class="formula"><img src="formulas/formula-14.png" alt="formula-14"></div> -->
+			<div v-katex:display="equations['A_e']" alt="A_e"></div>
 
 			<p>Since gamma is fixed at 1.2 for gaseous oxygen/hydrocarbon propellant products,
 			we can calculate the parameters for future design use; the results are tabulated in

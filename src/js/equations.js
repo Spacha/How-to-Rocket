@@ -27,4 +27,14 @@ export const getEquations = () => ({
 
 "A_t": 				{ "US": String.raw`\tag{7} A_t = \frac{\dot{w_t}}{P_t}\sqrt{RT/\gamma g_c}`,
 					  "SI": String.raw`\tag{7} A_t = \frac{\dot{m_t}}{P_t}\sqrt{RT/\gamma}`},
+"T_t": 				String.raw`\tag{8} T_t = T_c \left [ \frac{1}{ 1 + \frac{\gamma - 1}{2} } \right ]`,
+"T_t_val": 			String.raw`\tag{9} T_t = (0.909)T_c`,
+
+"T_c_val": 			{ "US": String.raw`\tag{10} T(°R) = T(°F) + 460`,
+					  "SI": String.raw`\tag{10} T(K) = T(°C) + 273.15`},
+"P_t": 				String.raw`\tag{11} P_t = P_c \left [ 1 + \frac{\gamma - 1}{ 2 } \right ]^{ -\frac{\gamma}{\gamma - 1} }`,
+"P_t_val": 			String.raw`\tag{12} P_t = (0.564)P_c`,
+
+"M_e2": 			String.raw`\tag{13} M_e^2 = \frac{2}{\gamma - 1} \left [ \left ( \frac{P_c}{P_{atm}} \right ) ^{\frac{\gamma - 1}{\gamma}} - 1 \right ]`,
+"A_e": 				String.raw`\tag{14} A_e = \frac{A_t}{M_e} \left [ \frac{ 1 + \frac{\gamma - 1}{2} M_e^2 }{ (\gamma + 1) / 2 } \right ]^{ \frac{\gamma + 1}{2(\gamma - 1)} }`,
 })

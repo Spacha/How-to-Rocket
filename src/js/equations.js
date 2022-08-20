@@ -11,7 +11,7 @@ export const getEquations = () => ({
 "kgms-1": 			a['kgms-1'],
 
 // Equations
-"of_ratio": 		String.raw`\tag{1} O/F = w_o/w_f`,
+"of_ratio": 		String.raw`\tag{1} O/F = \dot{w_o}/\dot{w_f}`,
 "isp": 				String.raw`\tag{2} I_{sp} = \frac{\text{thrust}}{\text{total propellant weight flow rate}}`,
 "w_t": 				{ "US": String.raw`\tag{3} \dot{w_t} = F/I_{sp} = 100/244 = 0.41 \operatorname{lb}/\operatorname{sec}`,
 					  "SI": String.raw`\tag{3} \dot{w_t} = F/I_{sp} = 445/244 = 1.824 \operatorname{N}/\operatorname{s}`},

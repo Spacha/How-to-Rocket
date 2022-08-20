@@ -407,10 +407,10 @@
 			<!-- W<sub>t</sub> = F/I<sub>sp</sub> = 100/244 = 0.41 lb/sec	(3) -->
 			<!-- <div id="formula-3" class="formula"><img src="formulas/formula-3.png" alt="formula-3"></div> -->
 			<div v-katex:display="equations['w_t'][unitSystem]" alt="w_t"></div>
-			<div v-if="unitSystem=='SI'" v-katex:display="equations['m_t']" alt="m_t"></div>
+			<span v-if="unitSystem=='SI'"><div v-katex:display="equations['m_t']" alt="m_t"></div></span>
 
 			<div id="figure-5" class="fig">
-				<<div class="img">
+				<div class="img">
 					<img v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`" alt="figure-5" style="max-width: 620px;" />
 				</div>
 				<span class="caption"><span class="fig-text">Figure 5</span>

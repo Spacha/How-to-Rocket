@@ -1,0 +1,39 @@
+{
+  "name": "How-to-rocket",
+  "version": "1.0.0",
+  "description": "The content IS NOT mine. All the hard work is done by the original writer Leroy J. Krzycki, and Daniel Risacher, who digitized this in 1996.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spacha/How-to-rocket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spacha/How-to-rocket/issues"
+  },
+  "homepage": "https://github.com/Spacha/How-to-rocket#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.9",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "katex": "^0.16.0",
+    "vue": "^2.6.12",
+    "vue-katex": "^0.5.0"
+  }
+}

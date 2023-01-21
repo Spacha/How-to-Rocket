@@ -719,8 +719,6 @@
             The nozzle divergence half-angle, (α), should be no greater than 15° to
             prevent nozzle internal flow losses.</p>
 
-            <div class="note-box">SI-unit conversion in progress...</div>
-
             <!-- CH 3.2 -->
             <h2 id="combustion-chamber">Combustion Chamber</h2>
 
@@ -728,14 +726,24 @@
             characteristic chamber length, <i>L*</i>, which is given by</p>
 
             <!-- L* =  Vc/At (19) -->
-            <div id="formula-19" class="formula"><img src="formulas/formula-19.png" alt="formula-19"></div>
+            <!-- <div id="formula-19" class="formula"><img src="formulas/formula-19.png" alt="formula-19"></div> -->
+            <div v-katex:display="equations['L_star']" alt="L_star"></div>
 
             <p class="formula-explanation">
-                where V<sub>c</sub> is the chamber volume (including the converging section of
-                the nozzle), in cubic inches, and A<sub>t</sub> is the nozzle throat area
-                (in<sup>2</sup>). For gaseous oxygen/hydrocarbon fuels, an L* of 50 to 100
-                inches is appropriate. L* is really a substitute for determining the chamber
-                residence time of the reacting propellants.
+                <span v-if="unitSystem=='US'">
+                    where <i>V<sub>c</sub></i> is the chamber volume (including the converging section of
+                    the nozzle), in cubic inches, and <i>A<sub>t</sub></i> is the nozzle throat area
+                    (in<sup>2</sup>). For gaseous oxygen/hydrocarbon fuels, an <i>L*</i> of 50 to 100
+                    inches is appropriate. <i>L*</i> is really a substitute for determining the chamber
+                    residence time of the reacting propellants.
+                </span>
+                <span v-else>
+                    where <i>V<sub>c</sub></i> is the chamber volume (including the converging section of
+                    the nozzle), in cubic centimeters, and <i>A<sub>t</sub></i> is the nozzle throat area
+                    (cm<sup>2</sup>). For gaseous oxygen/hydrocarbon fuels, an <i>L*</i> of 130 to 255
+                    cm is appropriate. <i>L*</i> is really a substitute for determining the chamber
+                    residence time of the reacting propellants.
+                </span>
             </p>
 
             <p>To reduce losses due to flow velocity of gases within the chamber, the combustion
@@ -745,23 +753,35 @@
             <p>The combustion chamber cross-sectional area is given by</p>
 
             <!-- Ac = (pi)Dc^2/4        (20) -->
-            <div id="formula-20" class="formula"><img src="formulas/formula-20.png" alt="formula-20"></div>
+            <!-- <div id="formula-20" class="formula"><img src="formulas/formula-20.png" alt="formula-20"></div> -->
+            <div v-katex:display="equations['A_c']" alt="A_c"></div>
 
             <p>The chamber volume is given by</p>
 
             <!-- Vc = AcLc + convergent volume      (21) -->
-            <div id="formula-21" class="formula"><img src="formulas/formula-21.png" alt="formula-21"></div>
+            <!-- <div id="formula-21" class="formula"><img src="formulas/formula-21.png" alt="formula-21"></div> -->
+            <div v-katex:display="equations['V_c-1']" alt="V_c-1"></div>
 
             <p>For small combustion chambers the convergent volume is about 1/10 the volume of
             the cylindrical portion of the chamber, so that</p>
 
             <!-- Vc = 1.1 (AcLc)        (21) -->
-            <div id="formula-22" class="formula"><img src="formulas/formula-22.png" alt="formula-22"></div>
+            <!-- <div id="formula-22" class="formula"><img src="formulas/formula-22.png" alt="formula-22"></div> -->
+            <div v-katex:display="equations['V_c-2']" alt="V_c-2"></div>
             </pre></p>
 
-            <p>The chamber diameter for small combustion chambers (thrust level less than 75lbs)
-            should be three to five times the nozzle throat diameter so the injector will have
-            usable face area.</p>
+            <span v-if="unitSystem=='US'">
+                <p>The chamber diameter for small combustion chambers (thrust level less than 75 lbs)
+                should be three to five times the nozzle throat diameter so the injector will have
+                usable face area.</p>
+            </span>
+            <span v-else>
+                <p>The chamber diameter for small combustion chambers (thrust level less than 335 N)
+                should be three to five times the nozzle throat diameter so the injector will have
+                usable face area.</p>
+            </span>
+
+            <div class="note-box">SI-unit conversion in progress...</div>
 
             <!-- CH 3.3 -->
             <h2 id="chamber-wall-thickness">Chamber Wall Thickness</h2>
@@ -2132,7 +2152,7 @@
                 from the engine) the gaseous oxygen valve may be turned off. The
                 nitrogen purge valve is closed, the cylinder valves are closcd, and
                 the fuel tank vent valve opened. The oxygen line is vented by briefly
-                opening the oxygen flow need1e valve. Water should be allowed to flow
+                opening the oxygen flow needle valve. Water should be allowed to flow
                 through the engine cooling jacket for several minutes after run
                 termination.</li>
 

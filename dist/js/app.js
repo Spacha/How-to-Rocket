@@ -3005,6 +3005,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -23632,19 +23652,64 @@ var render = function() {
           _vm._v(" "),
           _vm._m(45),
           _vm._v(" "),
-          _c("div", { staticClass: "note-box" }, [
-            _vm._v("SI-unit conversion in progress...")
-          ]),
-          _vm._v(" "),
           _c("h2", { attrs: { id: "combustion-chamber" } }, [
             _vm._v("Combustion Chamber")
           ]),
           _vm._v(" "),
           _vm._m(46),
           _vm._v(" "),
-          _vm._m(47),
+          _c("div", {
+            directives: [
+              {
+                name: "katex",
+                rawName: "v-katex:display",
+                value: _vm.equations["L_star"],
+                expression: "equations['L_star']",
+                arg: "display"
+              }
+            ],
+            attrs: { alt: "L_star" }
+          }),
           _vm._v(" "),
-          _vm._m(48),
+          _c("p", { staticClass: "formula-explanation" }, [
+            _vm.unitSystem == "US"
+              ? _c("span", [
+                  _vm._v("\n                where "),
+                  _vm._m(47),
+                  _vm._v(
+                    " is the chamber volume (including the converging section of\n                the nozzle), in cubic inches, and "
+                  ),
+                  _vm._m(48),
+                  _vm._v(" is the nozzle throat area\n                (in"),
+                  _c("sup", [_vm._v("2")]),
+                  _vm._v("). For gaseous oxygen/hydrocarbon fuels, an "),
+                  _c("i", [_vm._v("L*")]),
+                  _vm._v(
+                    " of 50 to 100\n                inches is appropriate. "
+                  ),
+                  _c("i", [_vm._v("L*")]),
+                  _vm._v(
+                    " is really a substitute for determining the chamber\n                residence time of the reacting propellants.\n            "
+                  )
+                ])
+              : _c("span", [
+                  _vm._v("\n                where "),
+                  _vm._m(49),
+                  _vm._v(
+                    " is the chamber volume (including the converging section of\n                the nozzle), in cubic centimeters, and "
+                  ),
+                  _vm._m(50),
+                  _vm._v(" is the nozzle throat area\n                (cm"),
+                  _c("sup", [_vm._v("2")]),
+                  _vm._v("). For gaseous oxygen/hydrocarbon fuels, an "),
+                  _c("i", [_vm._v("L*")]),
+                  _vm._v(" of 130 to 255\n                cm is appropriate. "),
+                  _c("i", [_vm._v("L*")]),
+                  _vm._v(
+                    " is really a substitute for determining the chamber\n                residence time of the reacting propellants.\n            "
+                  )
+                ])
+          ]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23656,11 +23721,33 @@ var render = function() {
             _vm._v("The combustion chamber cross-sectional area is given by")
           ]),
           _vm._v(" "),
-          _vm._m(49),
+          _c("div", {
+            directives: [
+              {
+                name: "katex",
+                rawName: "v-katex:display",
+                value: _vm.equations["A_c"],
+                expression: "equations['A_c']",
+                arg: "display"
+              }
+            ],
+            attrs: { alt: "A_c" }
+          }),
           _vm._v(" "),
           _c("p", [_vm._v("The chamber volume is given by")]),
           _vm._v(" "),
-          _vm._m(50),
+          _c("div", {
+            directives: [
+              {
+                name: "katex",
+                rawName: "v-katex:display",
+                value: _vm.equations["V_c-1"],
+                expression: "equations['V_c-1']",
+                arg: "display"
+              }
+            ],
+            attrs: { alt: "V_c-1" }
+          }),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23668,14 +23755,39 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(51),
+          _c("div", {
+            directives: [
+              {
+                name: "katex",
+                rawName: "v-katex:display",
+                value: _vm.equations["V_c-2"],
+                expression: "equations['V_c-2']",
+                arg: "display"
+              }
+            ],
+            attrs: { alt: "V_c-2" }
+          }),
           _vm._v(" "),
           _c("p"),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "The chamber diameter for small combustion chambers (thrust level less than 75lbs)\n        should be three to five times the nozzle throat diameter so the injector will have\n        usable face area."
-            )
+          _vm.unitSystem == "US"
+            ? _c("span", [
+                _c("p", [
+                  _vm._v(
+                    "The chamber diameter for small combustion chambers (thrust level less than 75 lbs)\n            should be three to five times the nozzle throat diameter so the injector will have\n            usable face area."
+                  )
+                ])
+              ])
+            : _c("span", [
+                _c("p", [
+                  _vm._v(
+                    "The chamber diameter for small combustion chambers (thrust level less than 335 N)\n            should be three to five times the nozzle throat diameter so the injector will have\n            usable face area."
+                  )
+                ])
+              ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "note-box" }, [
+            _vm._v("SI-unit conversion in progress...")
           ]),
           _vm._v(" "),
           _c("h2", { attrs: { id: "chamber-wall-thickness" } }, [
@@ -23688,11 +23800,11 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(51),
+          _vm._v(" "),
           _vm._m(52),
           _vm._v(" "),
           _vm._m(53),
-          _vm._v(" "),
-          _vm._m(54),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23700,7 +23812,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(55),
+          _vm._m(54),
           _vm._v(" "),
           _c("h2", { attrs: { id: "engine-cooling" } }, [
             _vm._v("Engine Cooling")
@@ -23724,13 +23836,13 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(56),
+          _vm._m(55),
           _vm._v(" "),
           _c("h2", { attrs: { id: "heat-transfer" } }, [
             _vm._v("Heat Transfer")
           ]),
           _vm._v(" "),
-          _vm._m(57),
+          _vm._m(56),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23738,9 +23850,9 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(58),
+          _vm._m(57),
           _vm._v(" "),
-          _vm._m(59),
+          _vm._m(58),
           _vm._v(" "),
           _c("h2", { attrs: { id: "materials" } }, [_vm._v("Materials")]),
           _vm._v(" "),
@@ -23762,7 +23874,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(60),
+          _vm._m(59),
           _vm._v(" "),
           _c("h2", { attrs: { id: "injectors" } }, [_vm._v("Injectors")]),
           _vm._v(" "),
@@ -23778,9 +23890,9 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(61),
+          _vm._m(60),
           _vm._v(" "),
-          _vm._m(62),
+          _vm._m(61),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23794,7 +23906,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(63),
+          _vm._m(62),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23802,7 +23914,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(64),
+          _vm._m(63),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23810,7 +23922,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(65),
+          _vm._m(64),
           _vm._v(" "),
           _c("h1", { attrs: { id: "example-design-calculation" } }, [
             _vm._v("Example design calculation")
@@ -23832,6 +23944,8 @@ var render = function() {
           _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-2" } }, [_vm._v("Step 1")]),
           _vm._v(" "),
+          _vm._m(65),
+          _vm._v(" "),
           _vm._m(66),
           _vm._v(" "),
           _vm._m(67),
@@ -23842,8 +23956,6 @@ var render = function() {
           _vm._v(" "),
           _vm._m(70),
           _vm._v(" "),
-          _vm._m(71),
-          _vm._v(" "),
           _c("p", [
             _vm._v(
               "As a check, we divide the oxygen flow rate by the fuel flow rate and\n        the result is 2.5, as it should be."
@@ -23852,72 +23964,72 @@ var render = function() {
           _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-2" } }, [_vm._v("Step 2")]),
           _vm._v(" "),
+          _vm._m(71),
+          _vm._v(" "),
           _vm._m(72),
           _vm._v(" "),
           _vm._m(73),
           _vm._v(" "),
-          _vm._m(74),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-3" } }, [_vm._v("Step 3")]),
+          _vm._v(" "),
+          _vm._m(74),
           _vm._v(" "),
           _vm._m(75),
           _vm._v(" "),
-          _vm._m(76),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-4" } }, [_vm._v("Step 4")]),
+          _vm._v(" "),
+          _vm._m(76),
           _vm._v(" "),
           _vm._m(77),
           _vm._v(" "),
           _vm._m(78),
           _vm._v(" "),
-          _vm._m(79),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-5" } }, [_vm._v("Step 5")]),
+          _vm._v(" "),
+          _vm._m(79),
           _vm._v(" "),
           _vm._m(80),
           _vm._v(" "),
-          _vm._m(81),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-6" } }, [_vm._v("Step 6")]),
+          _vm._v(" "),
+          _vm._m(81),
           _vm._v(" "),
           _vm._m(82),
           _vm._v(" "),
           _vm._m(83),
           _vm._v(" "),
-          _vm._m(84),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-7" } }, [_vm._v("Step 7")]),
+          _vm._v(" "),
+          _vm._m(84),
           _vm._v(" "),
           _vm._m(85),
           _vm._v(" "),
-          _vm._m(86),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-8" } }, [_vm._v("Step 8")]),
+          _vm._v(" "),
+          _vm._m(86),
           _vm._v(" "),
           _vm._m(87),
           _vm._v(" "),
-          _vm._m(88),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-9" } }, [_vm._v("Step 9")]),
+          _vm._v(" "),
+          _vm._m(88),
           _vm._v(" "),
           _vm._m(89),
           _vm._v(" "),
           _vm._m(90),
           _vm._v(" "),
           _vm._m(91),
-          _vm._v(" "),
-          _vm._m(92),
           _c("p"),
           _vm._v(" "),
           _c("p", [_vm._v("Therefore,")]),
           _vm._v(" "),
-          _vm._m(93),
+          _vm._m(92),
           _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-10" } }, [_vm._v("Step 10")]),
           _vm._v(" "),
-          _vm._m(94),
+          _vm._m(93),
           _vm._v(" "),
-          _vm._m(95),
+          _vm._m(94),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23927,11 +24039,11 @@ var render = function() {
           _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-11" } }, [_vm._v("Step 11")]),
           _vm._v(" "),
+          _vm._m(95),
+          _vm._v(" "),
           _vm._m(96),
           _vm._v(" "),
           _vm._m(97),
-          _vm._v(" "),
-          _vm._m(98),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -23939,21 +24051,21 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(98),
+          _vm._v(" "),
           _vm._m(99),
           _vm._v(" "),
           _vm._m(100),
           _vm._v(" "),
-          _vm._m(101),
-          _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-12" } }, [_vm._v("Step 12")]),
+          _vm._v(" "),
+          _vm._m(101),
           _vm._v(" "),
           _vm._m(102),
           _vm._v(" "),
           _vm._m(103),
           _vm._v(" "),
           _vm._m(104),
-          _vm._v(" "),
-          _vm._m(105),
           _vm._v(" "),
           _c("h3", { attrs: { id: "example-step-13" } }, [_vm._v("Step 13")]),
           _vm._v(" "),
@@ -23963,6 +24075,8 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(105),
+          _vm._v(" "),
           _vm._m(106),
           _vm._v(" "),
           _vm._m(107),
@@ -23971,17 +24085,15 @@ var render = function() {
           _vm._v(" "),
           _vm._m(109),
           _vm._v(" "),
-          _vm._m(110),
-          _vm._v(" "),
           _c("p", [_vm._v("Substituting in the above equations")]),
+          _vm._v(" "),
+          _vm._m(110),
           _vm._v(" "),
           _vm._m(111),
           _vm._v(" "),
-          _vm._m(112),
-          _vm._v(" "),
           _c("p", [_vm._v("Therefore")]),
           _vm._v(" "),
-          _vm._m(113),
+          _vm._m(112),
           _vm._v(" "),
           _c("p", [_vm._v("The water flow gap is 0.0425 inch.")]),
           _vm._v(" "),
@@ -23993,7 +24105,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(114),
+          _vm._m(113),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24007,6 +24119,8 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(114),
+          _vm._v(" "),
           _vm._m(115),
           _vm._v(" "),
           _vm._m(116),
@@ -24015,15 +24129,13 @@ var render = function() {
           _vm._v(" "),
           _vm._m(118),
           _vm._v(" "),
-          _vm._m(119),
-          _vm._v(" "),
           _c("p", [
             _vm._v(
               "If only one injection hole is used (a poor practice which can\n        lead to combustion instability) its diameter would be"
             )
           ]),
           _vm._v(" "),
-          _vm._m(120),
+          _vm._m(119),
           _vm._v(" "),
           _c("p", [_vm._v("A number 69 drill could be used for this hole.")]),
           _vm._v(" "),
@@ -24031,7 +24143,7 @@ var render = function() {
             _vm._v("If two injection holes are used, their diameter would be")
           ]),
           _vm._v(" "),
-          _vm._m(121),
+          _vm._m(120),
           _vm._v(" "),
           _c("p", [_vm._v("A number 75 drill could be used for these holes.")]),
           _vm._v(" "),
@@ -24043,9 +24155,9 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(122),
+          _vm._m(121),
           _vm._v(" "),
-          _vm._m(123),
+          _vm._m(122),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24053,7 +24165,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(124),
+          _vm._m(123),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24061,13 +24173,13 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(124),
+          _vm._v(" "),
           _vm._m(125),
           _vm._v(" "),
           _vm._m(126),
           _vm._v(" "),
           _vm._m(127),
-          _vm._v(" "),
-          _vm._m(128),
           _vm._v(" "),
           _c("p", [_vm._v("A number 48 drill could be used for these holes.")]),
           _vm._v(" "),
@@ -24085,7 +24197,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(129),
+          _vm._m(128),
           _vm._v(" "),
           _c("h1", { attrs: { id: "fabrication" } }, [_vm._v("Fabrication")]),
           _vm._v(" "),
@@ -24101,7 +24213,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(130),
+          _vm._m(129),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24121,7 +24233,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(131),
+          _vm._m(130),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24135,7 +24247,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(132),
+          _vm._m(131),
           _vm._v(" "),
           _c("h4", [_vm._v("Table IV")]),
           _vm._v(" "),
@@ -24145,6 +24257,8 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(132),
+          _vm._v(" "),
           _vm._m(133),
           _vm._v(" "),
           _vm._m(134),
@@ -24152,8 +24266,6 @@ var render = function() {
           _vm._m(135),
           _vm._v(" "),
           _vm._m(136),
-          _vm._v(" "),
-          _vm._m(137),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24179,7 +24291,7 @@ var render = function() {
           _vm._v(" "),
           _c("h2", { attrs: { id: "feed-system" } }, [_vm._v("Feed System")]),
           _vm._v(" "),
-          _vm._m(138),
+          _vm._m(137),
           _vm._v(" "),
           _c("h2", { attrs: { id: "feed-system-components" } }, [
             _vm._v("Feed System Components")
@@ -24195,9 +24307,9 @@ var render = function() {
             _vm._v("High Pressure Gas Cylinders")
           ]),
           _vm._v(" "),
-          _vm._m(139),
+          _vm._m(138),
           _vm._v(" "),
-          _vm._m(140),
+          _vm._m(139),
           _vm._v(" "),
           _c("h3", { attrs: { id: "gaseous-nitrogen" } }, [
             _vm._v("Gaseous Nitrogen")
@@ -24233,11 +24345,11 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(140),
+          _vm._v(" "),
           _vm._m(141),
           _vm._v(" "),
           _vm._m(142),
-          _vm._v(" "),
-          _vm._m(143),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24245,7 +24357,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(144),
+          _vm._m(143),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24257,7 +24369,7 @@ var render = function() {
             _vm._v("Gaseous Nitrogen Regulator")
           ]),
           _vm._v(" "),
-          _vm._m(145),
+          _vm._m(144),
           _vm._v(" "),
           _c("h3", { attrs: { id: "gaseous-oxygen-regulator" } }, [
             _vm._v("Gaseous Oxygen Regulator")
@@ -24273,15 +24385,15 @@ var render = function() {
             _vm._v("Propellant Control Valves")
           ]),
           _vm._v(" "),
-          _vm._m(146),
+          _vm._m(145),
           _vm._v(" "),
           _c("h3", { attrs: { id: "other-valves" } }, [_vm._v("Other Valves")]),
           _vm._v(" "),
-          _vm._m(147),
+          _vm._m(146),
           _vm._v(" "),
           _c("h3", { attrs: { id: "check-valves" } }, [_vm._v("Check Valves")]),
           _vm._v(" "),
-          _vm._m(148),
+          _vm._m(147),
           _vm._v(" "),
           _c("h3", { attrs: { id: "relief-valves" } }, [
             _vm._v("Relief Valves")
@@ -24295,7 +24407,7 @@ var render = function() {
           _vm._v(" "),
           _c("h3", { attrs: { id: "fiel-filter" } }, [_vm._v("Fuel Filter")]),
           _vm._v(" "),
-          _vm._m(149),
+          _vm._m(148),
           _vm._v(" "),
           _c("h3", { attrs: { id: "pressure-cauges" } }, [
             _vm._v("Pressure Gauges")
@@ -24313,7 +24425,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(150),
+          _vm._m(149),
           _vm._v(" "),
           _c("h3", { attrs: { id: "plumbing" } }, [_vm._v("Plumbing")]),
           _vm._v(" "),
@@ -24337,9 +24449,9 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(151),
+          _vm._m(150),
           _vm._v(" "),
-          _vm._m(152),
+          _vm._m(151),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24373,7 +24485,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(153),
+          _vm._m(152),
           _vm._v(" "),
           _c("h1", { attrs: { id: "engine-check-out-and-calibration" } }, [
             _vm._v("Engine Check-Out and Calibration")
@@ -24435,11 +24547,11 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _vm._m(153),
+          _vm._v(" "),
           _vm._m(154),
           _vm._v(" "),
           _vm._m(155),
-          _vm._v(" "),
-          _vm._m(156),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -24475,7 +24587,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(157),
+          _vm._m(156),
           _vm._v(" "),
           _c("h1", { attrs: { id: "list-of-suppliers" } }, [
             _vm._v("List of Suppliers")
@@ -24487,7 +24599,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(158),
+          _vm._m(157),
           _vm._v(" "),
           _c("h1", { attrs: { id: "conversion-factors" } }, [
             _vm._v("Conversion Factors")
@@ -24495,7 +24607,7 @@ var render = function() {
           _vm._v(" "),
           _c("h4", [_vm._v("TABLE V")]),
           _vm._v(" "),
-          _vm._m(159),
+          _vm._m(158),
           _vm._v(" "),
           _c("h1", { attrs: { id: "additions" } }, [_vm._v("Additions")]),
           _vm._v(" "),
@@ -24503,11 +24615,13 @@ var render = function() {
             _vm._v("Additions and Corrections")
           ]),
           _vm._v(" "),
-          _vm._m(160),
+          _vm._m(159),
           _vm._v(" "),
           _c("h2", { attrs: { id: "other-notes" } }, [_vm._v("Other Notes")]),
           _vm._v(" "),
           _c("p", [_vm._v("Reprinted with permission.")]),
+          _vm._v(" "),
+          _vm._m(160),
           _vm._v(" "),
           _vm._m(161),
           _vm._v(" "),
@@ -24517,9 +24631,7 @@ var render = function() {
           _vm._v(" "),
           _vm._m(164),
           _vm._v(" "),
-          _vm._m(165),
-          _vm._v(" "),
-          _vm._m(166)
+          _vm._m(165)
         ],
         1
       ),
@@ -25527,59 +25639,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "formula", attrs: { id: "formula-19" } }, [
-      _c("img", {
-        attrs: { src: "formulas/formula-19.png", alt: "formula-19" }
-      })
-    ])
+    return _c("i", [_vm._v("V"), _c("sub", [_vm._v("c")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "formula-explanation" }, [
-      _vm._v("\n            where V"),
-      _c("sub", [_vm._v("c")]),
-      _vm._v(
-        " is the chamber volume (including the converging section of\n            the nozzle), in cubic inches, and A"
-      ),
-      _c("sub", [_vm._v("t")]),
-      _vm._v(" is the nozzle throat area\n            (in"),
-      _c("sup", [_vm._v("2")]),
-      _vm._v(
-        "). For gaseous oxygen/hydrocarbon fuels, an L* of 50 to 100\n            inches is appropriate. L* is really a substitute for determining the chamber\n            residence time of the reacting propellants.\n        "
-      )
-    ])
+    return _c("i", [_vm._v("A"), _c("sub", [_vm._v("t")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "formula", attrs: { id: "formula-20" } }, [
-      _c("img", {
-        attrs: { src: "formulas/formula-20.png", alt: "formula-20" }
-      })
-    ])
+    return _c("i", [_vm._v("V"), _c("sub", [_vm._v("c")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "formula", attrs: { id: "formula-21" } }, [
-      _c("img", {
-        attrs: { src: "formulas/formula-21.png", alt: "formula-21" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "formula", attrs: { id: "formula-22" } }, [
-      _c("img", {
-        attrs: { src: "formulas/formula-22.png", alt: "formula-22" }
-      })
-    ])
+    return _c("i", [_vm._v("A"), _c("sub", [_vm._v("t")])])
   },
   function() {
     var _vm = this
@@ -27191,7 +27269,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _vm._v(
-          "The operator should have a timer or have someone time the engine\n            run. It is quite safe to simply let the engine run out of liquid\n            fuel. The gaseous nitrogen pressurizing the fuel tank then purges the\n            fuel supply system automatically. The engine will abruptly stop\n            operation and the operator can then turn off the flow of gaseous\n            oxygen. If the engine is to be stopped prior to fuel depletion the\n            fuel flow control valve should be quickly turned off, followed by\n            opening of the nitrogen purge valve. After the engine has stopped\n            operation (thus assuring that the nitrogen purge has forced all fuel\n            from the engine) the gaseous oxygen valve may be turned off. The\n            nitrogen purge valve is closed, the cylinder valves are closcd, and\n            the fuel tank vent valve opened. The oxygen line is vented by briefly\n            opening the oxygen flow need1e valve. Water should be allowed to flow\n            through the engine cooling jacket for several minutes after run\n            termination."
+          "The operator should have a timer or have someone time the engine\n            run. It is quite safe to simply let the engine run out of liquid\n            fuel. The gaseous nitrogen pressurizing the fuel tank then purges the\n            fuel supply system automatically. The engine will abruptly stop\n            operation and the operator can then turn off the flow of gaseous\n            oxygen. If the engine is to be stopped prior to fuel depletion the\n            fuel flow control valve should be quickly turned off, followed by\n            opening of the nitrogen purge valve. After the engine has stopped\n            operation (thus assuring that the nitrogen purge has forced all fuel\n            from the engine) the gaseous oxygen valve may be turned off. The\n            nitrogen purge valve is closed, the cylinder valves are closcd, and\n            the fuel tank vent valve opened. The oxygen line is vented by briefly\n            opening the oxygen flow needle valve. Water should be allowed to flow\n            through the engine cooling jacket for several minutes after run\n            termination."
         )
       ]),
       _vm._v(" "),
@@ -40743,6 +40821,46 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEquations", function() { return getEquations; });
+function _templateObject31() {
+  var data = _taggedTemplateLiteral(["\tag{22} V_c = 1.1(A_c L_c)"], ["\\tag{22} V_c = 1.1(A_c L_c)"]);
+
+  _templateObject31 = function _templateObject31() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject30() {
+  var data = _taggedTemplateLiteral(["\tag{21} V_c = A_c L_c + \text{convergent volume}"], ["\\tag{21} V_c = A_c L_c + \\text{convergent volume}"]);
+
+  _templateObject30 = function _templateObject30() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject29() {
+  var data = _taggedTemplateLiteral(["\tag{20} A_c = pi D_c^2 / 4"], ["\\tag{20} A_c = \\pi D_c^2 / 4"]);
+
+  _templateObject29 = function _templateObject29() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject28() {
+  var data = _taggedTemplateLiteral(["\tag{19} L^* = V_c / A_t"], ["\\tag{19} L^* = V_c / A_t"]);
+
+  _templateObject28 = function _templateObject28() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject27() {
   var data = _taggedTemplateLiteral(["\tag{18} D_e = sqrt{4A_e / pi}"], ["\\tag{18} D_e = \\sqrt{4A_e / \\pi}"]);
 
@@ -41057,7 +41175,11 @@ var getEquations = function getEquations() {
     "A_e2": String.raw(_templateObject24()),
     "T_e": String.raw(_templateObject25()),
     "D_t": String.raw(_templateObject26()),
-    "D_e": String.raw(_templateObject27())
+    "D_e": String.raw(_templateObject27()),
+    "L_star": String.raw(_templateObject28()),
+    "A_c": String.raw(_templateObject29()),
+    "V_c-1": String.raw(_templateObject30()),
+    "V_c-2": String.raw(_templateObject31())
   };
 };
 

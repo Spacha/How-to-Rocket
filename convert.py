@@ -1,6 +1,9 @@
 def ft_m(ft):       return ft*0.3048
 def m_ft(m):        return m/0.3048
 
+def in_cm(in_):     return in_*2.54
+def cm_in(cm):      return cm/2.54
+
 def F_C(F):         return (F - 32)/1.8
 def C_F(C):         return (C*1.8) + 32
 
@@ -30,9 +33,10 @@ print( 0.117 * lb )
 '''
 #print( 44.5 * lb / ft3 )
 #print( F_C(68) )
-
+'''
 print( round( F_C( 6000 ), 3) )
 print( round( F_C( 5000 ), 3) )
 print( round( F_C( 4000 ), 3) )
 print( round( F_C( 3000 ), 3) )
 print( round( F_C( 2000 ), 3) )
+'''

@@ -42,4 +42,9 @@ export const getEquations = () => ({
 "T_e":              String.raw`\tag{16} T_e = T_c (T_e / T_c)`,
 "D_t":              String.raw`\tag{17} D_t = \sqrt{4A_t / \pi}`,
 "D_e":              String.raw`\tag{18} D_e = \sqrt{4A_e / \pi}`,
+
+"L_star":           String.raw`\tag{19} L^* = V_c / A_t`,
+"A_c":              String.raw`\tag{20} A_c = \pi D_c^2 / 4`,
+"V_c-1":            String.raw`\tag{21} V_c = A_c L_c + \text{convergent volume}`,
+"V_c-2":            String.raw`\tag{22} V_c = 1.1(A_c L_c)`,
 })

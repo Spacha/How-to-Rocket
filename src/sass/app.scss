@@ -4,220 +4,220 @@
 /* MAIN STYLES */
 
 html, body {
-	font-family: 'Alegreya', serif;
-	font-size: 18px;
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
 }
 body {
-	background: #f3f3f3;
+    background: #f3f3f3;
 }
 
 hr {
-	border-bottom: 0;
-	border: 1px dashed #dcdcdc;
+    border-bottom: 0;
+    border: 1px dashed #dcdcdc;
 }
 
 .container {
-	width: 780px;
-	max-width: 90%;
-	margin: 0 auto;
+    width: 780px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 h1, h2 {
-	margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 
 /* COVER */
 .cover {
-	margin: 6rem 0;
-	height: 100vh;
+    margin: 6rem 0;
+    height: 100vh;
 }
-	.cover h1 {
-		font-size: 180%;
-		margin: 0;
-	}
-	.cover h2 {
-		font-size: 110%;
-	    margin: 0.4rem 0;
-	    color: #616161;
-	}
+    .cover h1 {
+        font-size: 180%;
+        margin: 0;
+    }
+    .cover h2 {
+        font-size: 110%;
+        margin: 0.4rem 0;
+        color: #616161;
+    }
 
 .book-info {
-	text-align: right;
-	margin-top: 15rem;
+    text-align: right;
+    margin-top: 15rem;
 }
 
 div.cover-image-container {
-	width: 600px;
-	margin: 3rem auto;
-	max-width: 100%;
+    width: 600px;
+    margin: 3rem auto;
+    max-width: 100%;
 }
-	div.cover-image-container img {
-		width: 100%;
-	}
+    div.cover-image-container img {
+        width: 100%;
+    }
 
 
 /* FIGURE */
 
 .fig {
-	display: block;
-	text-align: center;
-	margin: 1.5rem 0;
+    display: block;
+    text-align: center;
+    margin: 1.5rem 0;
 }
-	.fig img {
-		//max-height: 300px;
-	}
+    .fig img {
+        //max-height: 300px;
+    }
 
 .fig .caption {
-	color: #999;
-	font-style: italic;
-	font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
 }
-	.fig .caption .fig-text {
-		color: #000;
-		font-weight: bold;
-	}
+    .fig .caption .fig-text {
+        color: #000;
+        font-weight: bold;
+    }
 
 a.figure-link {
-	text-decoration: none;
-	color: #828282;
+    text-decoration: none;
+    color: #828282;
 }
 
 @media(max-width: 708px) {
-	.fig img {
-		width: 100%;
-		max-height: none;
-	}
+    .fig img {
+        width: 100%;
+        max-height: none;
+    }
 }
 
 
 /* FORMULA */
 
 .katex {
-	font-size: 1em !important;
+    font-size: 1em !important;
 }
 
 
 /* FORMULA (OLD) */
 
 div.formula {
-	text-align: right;
-	max-width: 100%;
+    text-align: right;
+    max-width: 100%;
 }
-	div.formula img {
-		max-width: 100%;
-		width: 500px;
-	}
+    div.formula img {
+        max-width: 100%;
+        width: 500px;
+    }
 
 p.formula-explanation {
-	font-weight: bold;
-	color: #666;
+    font-weight: bold;
+    color: #666;
 
-	padding-left: 3rem;
-	border-left: 4px solid #ccc;
+    padding-left: 3rem;
+    border-left: 4px solid #ccc;
 }
 
 a.formula-link {
-	text-decoration: none;
-	color: #828282;
+    text-decoration: none;
+    color: #828282;
 }
 
 @media(max-width: 708px) {
-	div.formula {
-		text-align: left;
-		overflow-x: auto;
-	}
-	div.formula img {
-		width: 450px;
-		max-width: none;
-	}
+    div.formula {
+        text-align: left;
+        overflow-x: auto;
+    }
+    div.formula img {
+        width: 450px;
+        max-width: none;
+    }
 }
 
 
 /* TABLE */
 
 div.responsive-table {
-	max-width: 100%;
-	overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 table.table {
-	border-collapse: collapse;
+    border-collapse: collapse;
 
-	margin-bottom: 1.2rem;
-	border: 1px solid #cecece;
+    margin-bottom: 1.2rem;
+    border: 1px solid #cecece;
 }
-	table.table thead {
-		text-align: left;
-	}
-	table.table thead tr th {
-		padding: 0.4rem 0.9rem;
-		border-bottom: 1px dashed #cecece;
-	}
-		table.table thead tr th:not(:last-child) {
-			border-right: 1px dashed #cecece;
-		}
-	table.table tbody tr td {
-		padding: 0.15rem 0.8rem;
-	}
-		table.table tbody tr:first-child td {
-			padding-top: 0.8rem;
-		}
-		table.table tbody tr td:first-child {
-			padding-left: 0.8rem;
-		}
-		table.table tbody tr td:not(:last-child) {
-			border-right: 1px dashed #cecece;
-		}
-		table.table tbody tr:last-child td {
-			padding-bottom: 0.8rem;
-		}
+    table.table thead {
+        text-align: left;
+    }
+    table.table thead tr th {
+        padding: 0.4rem 0.9rem;
+        border-bottom: 1px dashed #cecece;
+    }
+        table.table thead tr th:not(:last-child) {
+            border-right: 1px dashed #cecece;
+        }
+    table.table tbody tr td {
+        padding: 0.15rem 0.8rem;
+    }
+        table.table tbody tr:first-child td {
+            padding-top: 0.8rem;
+        }
+        table.table tbody tr td:first-child {
+            padding-left: 0.8rem;
+        }
+        table.table tbody tr td:not(:last-child) {
+            border-right: 1px dashed #cecece;
+        }
+        table.table tbody tr:last-child td {
+            padding-bottom: 0.8rem;
+        }
 
 table.full-width {
-	width: 100%;
-	min-width: 640px;
+    width: 100%;
+    min-width: 640px;
 }
 
 a.table-link {
-	text-decoration: none;
-	color: #828282;
+    text-decoration: none;
+    color: #828282;
 }
 
 
 /* BOTTOM STICKIES */
 
 div.bottom-sticky {
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
 div.bottom-sticky div {
-	background: #eee;
-	border: 1px solid #dadada;
-	border-radius: 3px;
-	box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    background: #eee;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 
-	display: inline-block;
+    display: inline-block;
 }
 
 div.bottom-sticky div a {
-	text-decoration: none;
-	padding: 0.5rem 1rem;
-	display: block;
-	color: #888;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #888;
 }
 
 div.si-us {
-	/* ... */
+    /* ... */
 }
 
 div.back-to-top {
-	/* ... */
+    /* ... */
 }
-	div.back-to-top a {
-		/* ... */
-	}
+    div.back-to-top a {
+        /* ... */
+    }
 
 
 /* COLUMNS */
@@ -234,21 +234,21 @@ div.back-to-top {
 }
 
 @media (max-width: 830px) {
-	.left-column, .right-column {
-		float: none;
-		width: auto;
-	}
+    .left-column, .right-column {
+        float: none;
+        width: auto;
+    }
 }
 
 .thank-you {
-	color: #888; 
-	text-align: center;
-	margin: 6rem 0 2rem 0;
+    color: #888; 
+    text-align: center;
+    margin: 6rem 0 2rem 0;
 }
 
 .note-box {
-	background: #cedaef;
-	padding: 1em;
-	color: #474747;
-	font-style: italic;
+    background: #cedaef;
+    padding: 1em;
+    color: #474747;
+    font-style: italic;
 }

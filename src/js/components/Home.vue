@@ -335,8 +335,8 @@
 
 			<p class="formula-explanation">
 				where<br />
-				<span v-katex="'w_o'"></span> = <span v-if="unitSystem == 'US'">lb of oxygen/sec</span><span v-else>kg of oxygen/sec</span><br />
-				<span v-katex="'w_f'"></span> = <span v-if="unitSystem == 'US'">lb of fuel/sec</span><span v-else>kg of fuel/sec</span><br />
+				<span v-katex="'\\dot{w_o}'"></span> = <span v-if="unitSystem == 'US'">lb of oxygen/sec</span><span v-else>kg of oxygen/sec</span><br />
+				<span v-katex="'\\dot{w_f}'"></span> = <span v-if="unitSystem == 'US'">lb of fuel/sec</span><span v-else>kg of fuel/sec</span><br />
 			<!--
 				where<br />
 				w<sub>o</sub> = lb of oxygen/sec<br />
@@ -546,16 +546,16 @@
 
 			<p class="formula-explanation">
 				<span v-if="unitSystem=='US'">
-					where R = gas constant, given by R = R<sup>*</sup>/M. R<sup>*</sup> is the universal gas
-					constant equal to 1545.32 ft-lb/lb°R, and M is the molecular weight of the gas.
+					where <i>R</i> = gas constant, given by <i>R</i> = <i>R<sup>*</sup></i>/<i>M</i>. <i>R<sup>*</sup></i> is the universal gas
+					constant equal to 1545.32 ft-lb/lb°R, and <i>M</i> is the molecular weight of the gas.
 					The molecular weight of the hot gaseous products of combustion of gaseous
-					oxygen/hydrocarbon fuel is about 24, so that R is about 65 ft-lb/lb°R.
+					oxygen/hydrocarbon fuel is about 24, so that <i>R</i> is about 65 ft-lb/lb°R.
 				</span>
 				<span v-else>
-					where R = gas constant, given by R = R<sup>*</sup>/M. R<sup>*</sup> is the universal gas
-					constant equal to 8.31446 J/(mol &#183; K), and M is the molecular weight of the gas.
+					where <i>R</i> = gas constant, given by <i>R</i> = <i>R<sup>*</sup></i>/<i>M</i>. <i>R<sup>*</sup></i> is the universal gas
+					constant equal to 8.31446 J/(mol &#183; K), and <i>M</i> is the molecular weight of the gas.
 					The molecular weight of the hot gaseous products of combustion of gaseous
-					oxygen/hydrocarbon fuel is about 24, so that R is about 350 J/(kg &#183; K).
+					oxygen/hydrocarbon fuel is about 24, so that <i>R</i> is about 350 J/(kg &#183; K).
 				</span>
 			</p>
 
@@ -571,9 +571,9 @@
 			whenever gaseous oxygen/hydrocarbon propellants are used:</p>
 			
 			<p>
-				<span v-if="unitSystem=='US'">R = 65 ft-lb/lb°R</span><span v-else>R = 350 J/(kg &#183; K)</span><br />
+				<span v-if="unitSystem=='US'"><i>R</i> = 65 ft-lb/lb°R</span><span v-else><i>R</i> = 350 J/(kg &#183; K)</span><br />
 				𝛾 = 1.2<br />
-				<span v-if="unitSystem=='US'">g<sub>c</sub> = 32.2 ft/sec<sup>2</sup></span>
+				<span v-if="unitSystem=='US'"><i>g<sub>c</sub></i> = 32.2 ft/sec<sup>2</sup></span>
 			</p>
 
 			<p><i>T<sub>t</sub></i> is the temperature of the gases at the nozzle throat. The gas
@@ -641,17 +641,17 @@
 
 			<h4>Table III</h4>
 
-			<p>Nozzle Parameters for Various chamber pressures, 𝛾 = 1.2, P<sub>atm</sub> = 14.7 psi</p>
+			<p>Nozzle Parameters for Various chamber pressures, 𝛾 = 1.2, <i>P<sub>atm</sub></i> = <span v-if="unitSystem == 'US'">14.7 psi</span><span v-else>101.3 hPa</span>.</p>
 			
 			<!-- TABLE 3 -->
 			<div id="table-3" class="responsive-table">
 				<table class="table">
 					<thead>
 						<tr>
-							<th>P<sub>c</sub></th>
-							<th>M<sub>e</sub></th>
-							<th>A<sub>e</sub>/A<sub>t</sub></th>
-							<th>T<sub>e</sub>/T<sub>c</sub></th>
+							<th><i>P<sub>c</sub></i></th>
+							<th><i>M<sub>e</sub></i></th>
+							<th><i>A<sub>e</sub> / A<sub>t</sub></i></th>
+							<th><i>T<sub>e</sub> / T<sub>c</sub></i></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -689,35 +689,43 @@
 				</table>
 			</div>
 
+			Therefore,
+
 			<!-- Ae = At (Ae/At)		(15) -->
-			<div id="formula-15" class="formula"><img src="formulas/formula-15.png" alt="formula-15"></div>
+			<!-- <div id="formula-15" class="formula"><img src="formulas/formula-15.png" alt="formula-15"></div> -->
+			<div v-katex:display="equations['A_e2']" alt="A_e2"></div>
 
 			<p>The temperature ratio between the chamber gases and those at the nozzle exit is
 			given by</p>
 
 			<!-- Te = Tc (Te/Tc)		(16) -->
-			<div id="formula-16" class="formula"><img src="formulas/formula-16.png" alt="formula-16"></div>
+			<!-- <div id="formula-16" class="formula"><img src="formulas/formula-16.png" alt="formula-16"></div> -->
+			<div v-katex:display="equations['T_e']" alt="T_e"></div>
 
 			<p>The nozzle throat diameter is given by</p>
 
 			<!-- Dt = SQRT(4At/(pi))	(17) -->
-			<div id="formula-17" class="formula"><img src="formulas/formula-17.png" alt="formula-17"></div>
+			<!-- <div id="formula-17" class="formula"><img src="formulas/formula-17.png" alt="formula-17"></div> -->
+			<div v-katex:display="equations['D_t']" alt="D_t"></div>
 
 			<p>and the exit diameter is given by</p>
 
 			<!-- De = SQRT(4Ae/(pi))	(18) -->
-			<div id="formula-18" class="formula"><img src="formulas/formula-18.png" alt="formula-18"></div>
+			<!-- <div id="formula-18" class="formula"><img src="formulas/formula-18.png" alt="formula-18"></div> -->
+			<div v-katex:display="equations['D_e']" alt="D_e"></div>
 
-			<p>A good value for the nozzle convergence half-angle (beta)
-			(see <a class="figure-link" href="#figure-6">Fig. 6</a>) is 60 deg.
-			The nozzle divergence half-angle, (alpha), should be no greater than 15 deg to
+			<p>A good value for the nozzle convergence half-angle (β)
+			(see <a class="figure-link" href="#figure-6">Fig. 6</a>) is 60°.
+			The nozzle divergence half-angle, (α), should be no greater than 15° to
 			prevent nozzle internal flow losses.</p>
+
+			<div class="note-box">SI-unit conversion in progress...</div>
 
 			<!-- CH 3.2 -->
 			<h2 id="combustion-chamber">Combustion Chamber</h2>
 
 			<p>A parameter describing the chamber volume required for complete combustion is the
-			characteristic chamber length, L*, which is given by</p>
+			characteristic chamber length, <i>L*</i>, which is given by</p>
 
 			<!-- L* =  Vc/At (19) -->
 			<div id="formula-19" class="formula"><img src="formulas/formula-19.png" alt="formula-19"></div>

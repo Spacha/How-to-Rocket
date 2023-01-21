@@ -37,4 +37,9 @@ export const getEquations = () => ({
 
 "M_e2": 			String.raw`\tag{13} M_e^2 = \frac{2}{\gamma - 1} \left [ \left ( \frac{P_c}{P_{atm}} \right ) ^{\frac{\gamma - 1}{\gamma}} - 1 \right ]`,
 "A_e": 				String.raw`\tag{14} A_e = \frac{A_t}{M_e} \left [ \frac{ 1 + \frac{\gamma - 1}{2} M_e^2 }{ (\gamma + 1) / 2 } \right ]^{ \frac{\gamma + 1}{2(\gamma - 1)} }`,
+
+"A_e2": 			String.raw`\tag{15} A_e = A_t (A_e / A_t)`,
+"T_e": 				String.raw`\tag{16} T_e = T_c (T_e / T_c)`,
+"D_t": 				String.raw`\tag{17} D_t = \sqrt{4A_t / \pi}`,
+"D_e": 				String.raw`\tag{18} D_e = \sqrt{4A_e / \pi}`,
 })

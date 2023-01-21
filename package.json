@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "katex": "^0.16.0",
     "vue": "^2.6.12",
     "vue-katex": "^0.5.0"
   }

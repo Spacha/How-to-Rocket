@@ -28,3 +28,6 @@ Temporary Items
 
 node_modules
 #dist # enabled for Github pages
+
+# Python
+__pycache__

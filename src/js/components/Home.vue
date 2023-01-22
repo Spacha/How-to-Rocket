@@ -94,7 +94,7 @@
             This is the same phenomenon which pushes a garden hose backward as water squirts
             from the nozzle or makes a gun recoil when fired.</p>
 
-            <Figure name="Figure 1" src="img/fig-1.svg" caption="Typical Rocket Motor" />
+            <Figure name="Figure 1" src="img/fig-1.svg" caption="Typical rocket motor" />
 
             <!--<div id="figure-1" class="fig">
                 <div class="img">
@@ -330,18 +330,12 @@
             oxidizer divided by the weight flow of fuel, or</p>
 
             <!-- O/F = W<sub>o</sub>/W<sub>f</sub>      (1)<br /> -->
-            <!-- <div id="formula-1" class="formula"><img src="formulas/formula-1.png" alt="formula-1"></div> -->
-            <div v-katex:display="equations['of_ratio']" alt="of_ratio"></div>
+            <Equation name="of_ratio" label="1" />
 
             <p class="formula-explanation">
                 where<br />
                 <span v-katex="'\\dot{w_o}'"></span> = <span v-if="unitSystem == 'US'">lb of oxygen/sec</span><span v-else>kg of oxygen/sec</span><br />
                 <span v-katex="'\\dot{w_f}'"></span> = <span v-if="unitSystem == 'US'">lb of fuel/sec</span><span v-else>kg of fuel/sec</span><br />
-            <!--
-                where<br />
-                w<sub>o</sub> = lb of oxygen/sec<br />
-                w<sub>f</sub> = lb of fuel/sec<br />
-            -->
             </p>
 
             <p>When a stoichiometric ratio is achieved just enough oxygen is present to
@@ -360,35 +354,19 @@
                 caption="Flame temperature versus chamber pressure at stoichiometric mixture ratio."
                 :max-width="620"
             />
-            <!--<div id="figure-3" class="fig">
-                <div class="img">
-                    <img v-bind:src="`img/fig-3-${unitSystem.toLowerCase()}.svg`" alt="figure-3" style="max-width: 620px;" />
-                </div>
-                <span class="caption"><span class="fig-text">Figure 3</span>
-                Flame temperature versus chamber pressure at stoichiometric mixture ratio.
-                </span>
-            </div>-->
 
             <Figure name="Figure 4"
                 v-bind:src="`img/fig-4-${unitSystem.toLowerCase()}.svg`"
                 caption="Flame temperature versus mixture ratio at constant chamber pressure."
                 :max-width="620"
             />
-            <!--<div id="figure-4" class="fig">
-                <div class="img">
-                    <img v-bind:src="`img/fig-4-${unitSystem.toLowerCase()}.svg`" alt="figure-4" style="max-width: 620px;" />
-                </div>
-                <span class="caption"><span class="fig-text">Figure 4</span>
-                Flame temperature versus mixture ratio at constant chamber pressure.</span>
-            </div>-->
 
 
             <p>The thrust developed per <span v-if="unitSystem=='US'">pound</span><span v-else>weight unit (newton)</span> of total propellant burned per second is known as
             specific impulse and is defined as</p>
 
             <!-- I<sub>sp</sub> = thrust/total propellant flow rate     (2)<br /> -->
-            <!-- <div id="formula-2" class="formula"><img src="formulas/formula-2.png" alt="formula-2"></div> -->
-            <div v-katex:display="equations['isp']" alt="isp"></div>
+            <Equation name="isp" label="2" />
 
             <p><a class="figure-link" href="#figure-5">Figure 5</a>
             indicates the maximum performance possible from hydrocarbon fuels burned
@@ -405,30 +383,26 @@
             </span></p>
 
             <!-- W<sub>t</sub> = F/I<sub>sp</sub> = 100/244 = 0.41 lb/sec   (3) -->
-            <!-- <div id="formula-3" class="formula"><img src="formulas/formula-3.png" alt="formula-3"></div> -->
-            <div v-katex:display="equations['w_t'][unitSystem]" alt="w_t"></div>
-            <span v-if="unitSystem=='SI'"><div v-katex:display="equations['m_t']" alt="m_t"></div></span>
+            <Equation name="w_t" label="3" :units="unitSystem" />
+            <span v-if="unitSystem=='SI'"><Equation name="m_t" /></span>
 
-            <div id="figure-5" class="fig">
-                <div class="img">
-                    <img v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`" alt="figure-5" style="max-width: 620px;" />
-                </div>
-                <span class="caption"><span class="fig-text">Figure 5</span>
-                I<sub>sp</sub> performance of hydrocarbon fuels with gaseous oxygen.</span>
-            </div>
+            <Figure name="Figure 5"
+                v-bind:src="`img/fig-5-${unitSystem.toLowerCase()}.svg`"
+                :max-width="620"
+            >I<sub>sp</sub> performance of hydrocarbon fuels with gaseous oxygen.</Figure>
             
             <p>Since the maximum <i>I<sub>sp</sub></i> mixture ratio (<i>r</i>) for oxygen/gasoline is
             2.5, we have:</p>
 
             <span v-if="unitSystem=='US'">
-                <div v-katex:display="equations['w_o']" alt="w_o"></div>
-                <div v-katex:display="equations['w_f']" alt="w_f"></div>
-                <div v-katex:display="equations['w_t2']" alt="w_t2"></div>
+                <Equation name="w_o" label="4" />
+                <Equation name="w_f" label="5" />
+                <Equation name="w_t2" label="6" />
             </span>
             <span v-else>
-                <div v-katex:display="equations['m_o']" alt="m_o"></div>
-                <div v-katex:display="equations['m_f']" alt="m_f"></div>
-                <div v-katex:display="equations['m_t2']" alt="m_t2"></div>
+                <Equation name="m_o" label="4" />
+                <Equation name="m_f" label="5" />
+                <Equation name="m_t2" label="6" />
             </span>
 
             <p>[see <a href="#additions-and-corrections">Additions and Corrections</a>]</p>
@@ -525,13 +499,7 @@
             liquid-fuel rocket motors. The nomenclature for the motor design is shown in
             <a class="figure-link" href="#figure-6">Figure 6</a>.</p>
 
-            <div id="figure-6" class="fig">
-                <div class="img">
-                    <img src="img/fig-6.svg" alt="figure-6" style="max-width: 510px;" />
-                </div>
-                <span class="caption"><span class="fig-text">Figure 6</span>
-                Motor Design Configuration</span>
-            </div>
+            <Figure name="Figure 6" src="img/fig-6.svg" caption="Motor Design Configuration" />
 
             <!-- CH 3.1 -->
             <h2 id="nozzle">Nozzle</h2>
@@ -541,8 +509,7 @@
             Assuming perfect gas law theory:</p>
 
             <!-- At = Wt/Pt SQRT(R Tt/(gamma)g_c)   (7) -->
-            <!-- <div id="formula-7" class="formula"><img src="formulas/formula-7.png" alt="formula-7"></div> -->
-            <div v-katex:display="equations['A_t'][unitSystem]" alt="A_t"></div>
+            <Equation name="A_t" label="7" :units="unitSystem" />
 
             <p class="formula-explanation">
                 <span v-if="unitSystem=='US'">
@@ -582,35 +549,30 @@
             (Mach number = 1) at the throat. Therefore</p>
 
             <!-- Tt = Tc (1/(1+((gamma)-1)/2))  (8) -->
-            <!-- <div id="formula-8" class="formula"><img src="formulas/formula-8.png" alt="formula-8"></div> -->
-            <div v-katex:display="equations['T_t']" alt="T_t"></div>
+            <Equation name="T_t" label="8" />
 
             <p>For 𝛾 = 1.2</p>
 
             <!-- Tt = (.909)(Tc)            (9) -->
-            <!-- <div id="formula-9" class="formula"><img src="formulas/formula-9.png" alt="formula-9"></div> -->
-            <div v-katex:display="equations['T_t_val']" alt="T_t_val"></div>
+            <Equation name="T_t_val" label="9" />
 
             <p><i>T<sub>c</sub></i> is the combustion chamber flame temperature in <span v-if="unitSystem == 'US'">degrees Rankine
             (°R)</span><span v-else>degrees Celsius (°C)</span>, given by</p>
 
             <!-- T (degR) = T (°F) + 460    (10) -->
-            <!-- <div id="formula-10" class="formula"><img src="formulas/formula-10.png" alt="formula-10"></div> -->
-            <div v-katex:display="equations['T_c_val'][unitSystem]" alt="T_c_val"></div>
+            <Equation name="T_c_val" label="10" :units="unitSystem" />
 
             <p><i>P<sub>t</sub></i> is the gas pressure at the nozzle throat. The pressure at the
             nozzle throat is less than in the combustion chamber due to acceleration of the gas
             to the local speed of sound (Mach number = 1) at the throat. Therefore</p>
 
             <!-- Pt = Pc(1+((gamma)-1)/2)^((gamma)/((gamma)-1))     (11) -->
-            <!-- <div id="formula-11" class="formula"><img src="formulas/formula-11.png" alt="formula-11"></div> -->
-            <div v-katex:display="equations['P_t']" alt="P_t"></div>
+            <Equation name="P_t" label="11" />
 
             <p>For 𝛾 = 1.2</p>
 
             <!-- Pt = (.564)(Pc)        (12) -->
-            <!-- <div id="formula-12" class="formula"><img src="formulas/formula-12.png" alt="formula-12"></div> -->
-            <div v-katex:display="equations['P_t_val']" alt="P_t_val"></div>
+            <Equation name="P_t_val" label="12" />
 
             <p>The hot gases must now be expanded in the diverging section of the nozzle to
             obtain maximum thrust. The pressure of these gases will decrease as energy is used
@@ -622,8 +584,7 @@
             Mach number at the nozzle exit is given by a perfect gas expansion expression</p>
 
             <!-- Me^2 = 2/((gamma)-1)((Pc/Patm)^(((gamma)-1)/gamma) - 1)        (13) -->
-            <!-- <div id="formula-13" class="formula"><img src="formulas/formula-13.png" alt="formula-13"></div> -->
-            <div v-katex:display="equations['M_e2']" alt="M_e2"></div>
+            <Equation name="M_e2" label="13" />
 
             <p><i>P<sub>c</sub></i> is the pressure in the combustion chamber and <i>P<sub>atm</sub></i> is
             atmospheric pressure, or <span v-if="unitSystem == 'US'">14.7 psi</span><span v-else>101.3 kPa</span>.</p>
@@ -632,8 +593,7 @@
             choice of chamber pressure is given by</p>
 
             <!-- Ae = At/Me * ((1 + ((gamma)-1)/2 Me^2)/(((gamma)+1)/2))^(((gamma)+1)/2((gamma)-1)) (14) -->
-            <!-- <div id="formula-14" class="formula"><img src="formulas/formula-14.png" alt="formula-14"></div> -->
-            <div v-katex:display="equations['A_e']" alt="A_e"></div>
+            <Equation name="A_e" label="14" />
 
             <p>Since gamma is fixed at 1.2 for gaseous oxygen/hydrocarbon propellant products,
             we can calculate the parameters for future design use; the results are tabulated in
@@ -692,27 +652,23 @@
             Therefore,
 
             <!-- Ae = At (Ae/At)        (15) -->
-            <!-- <div id="formula-15" class="formula"><img src="formulas/formula-15.png" alt="formula-15"></div> -->
-            <div v-katex:display="equations['A_e2']" alt="A_e2"></div>
+            <Equation name="A_e2" label="15" />
 
             <p>The temperature ratio between the chamber gases and those at the nozzle exit is
             given by</p>
 
             <!-- Te = Tc (Te/Tc)        (16) -->
-            <!-- <div id="formula-16" class="formula"><img src="formulas/formula-16.png" alt="formula-16"></div> -->
-            <div v-katex:display="equations['T_e']" alt="T_e"></div>
+            <Equation name="T_e" label="16" />
 
             <p>The nozzle throat diameter is given by</p>
 
             <!-- Dt = SQRT(4At/(pi))    (17) -->
-            <!-- <div id="formula-17" class="formula"><img src="formulas/formula-17.png" alt="formula-17"></div> -->
-            <div v-katex:display="equations['D_t']" alt="D_t"></div>
+            <Equation name="D_t" label="17" />
 
             <p>and the exit diameter is given by</p>
 
             <!-- De = SQRT(4Ae/(pi))    (18) -->
-            <!-- <div id="formula-18" class="formula"><img src="formulas/formula-18.png" alt="formula-18"></div> -->
-            <div v-katex:display="equations['D_e']" alt="D_e"></div>
+            <Equation name="D_e" label="18" />
 
             <p>A good value for the nozzle convergence half-angle (β)
             (see <a class="figure-link" href="#figure-6">Fig. 6</a>) is 60°.
@@ -726,8 +682,7 @@
             characteristic chamber length, <i>L*</i>, which is given by</p>
 
             <!-- L* =  Vc/At (19) -->
-            <!-- <div id="formula-19" class="formula"><img src="formulas/formula-19.png" alt="formula-19"></div> -->
-            <div v-katex:display="equations['L_star']" alt="L_star"></div>
+            <Equation name="L_star" label="19" />
 
             <p class="formula-explanation">
                 <span v-if="unitSystem=='US'">
@@ -753,21 +708,18 @@
             <p>The combustion chamber cross-sectional area is given by</p>
 
             <!-- Ac = (pi)Dc^2/4        (20) -->
-            <!-- <div id="formula-20" class="formula"><img src="formulas/formula-20.png" alt="formula-20"></div> -->
-            <div v-katex:display="equations['A_c']" alt="A_c"></div>
+            <Equation name="A_c" label="20" />
 
             <p>The chamber volume is given by</p>
 
             <!-- Vc = AcLc + convergent volume      (21) -->
-            <!-- <div id="formula-21" class="formula"><img src="formulas/formula-21.png" alt="formula-21"></div> -->
-            <div v-katex:display="equations['V_c-1']" alt="V_c-1"></div>
+            <Equation name="V_c1" label="21" />
 
             <p>For small combustion chambers the convergent volume is about 1/10 the volume of
             the cylindrical portion of the chamber, so that</p>
 
-            <!-- Vc = 1.1 (AcLc)        (21) -->
-            <!-- <div id="formula-22" class="formula"><img src="formulas/formula-22.png" alt="formula-22"></div> -->
-            <div v-katex:display="equations['V_c-2']" alt="V_c-2"></div>
+            <!-- Vc = 1.1 (AcLc)        (22) -->
+            <Equation name="V_c2" label="22" />
             </pre></p>
 
             <span v-if="unitSystem=='US'">
@@ -792,7 +744,7 @@
             welding or brazing purposes. Since the chamber will be a cylindrical shell, the
             working stress in the wall is given by</p>
 
-            <!-- S = PD/2t_w        (22) -->
+            <!-- S = PD/2t_w        (23) -->
             <div id="formula-23" class="formula"><img src="formulas/formula-23.png" alt="formula-23"></div>
 
 
@@ -803,7 +755,7 @@
             allowable working stress is about 8000 psi. The thickness of the combustion chamber
             wall is therefore given by</p>
 
-            <!-- t_w = PD/16000     (23) -->
+            <!-- t_w = PD/16000     (24) -->
             <div id="formula-24" class="formula"><img src="formulas/formula-24.png" alt="formula-24"></div>
 
             <p>This is the minimum thickness; actually the thickness should be somewhat greater
@@ -873,7 +825,7 @@
             the cooling jacket. The total heat transferred from the chamber to the cooling water
             is given by</p>
 
-            <!-- Q = q A = w_w * c_p * (T - Ti)     (24) -->
+            <!-- Q = q A = w_w * c_p * (T - Ti)     (25) -->
             <div id="formula-25" class="formula"><img src="formulas/formula-25.png" alt="formula-25"></div>
 
             <p class="formula-explanation">
@@ -950,7 +902,7 @@
             design, we present below the equation for the flow of liquid through a simple
             orifice (a round drilled hole, for example)</p>
 
-            <!-- w = Cd A SQRT(2g(rho)(deltaP))     (25) -->
+            <!-- w = Cd A SQRT(2g(rho)(deltaP))     (26) -->
             <div id="formula-26" class="formula"><img src="formulas/formula-26.png" alt="formula-26"></div>
 
             <p>
@@ -969,7 +921,7 @@
             <p>The injection velocity, or velocity of the liquid stream issuing from the
             orifice, is given by</p>
 
-            <!-- v = Cd SQRT(2g((deltaP)/(rho)))        (26) -->
+            <!-- v = Cd SQRT(2g((deltaP)/(rho)))        (27) -->
             <div id="formula-27" class="formula"><img src="formulas/formula-27.png" alt="formula-27"></div>
 
             <p>Injection pressure drops of 70 to 150 psi, or injection velocities of 50 to 100
@@ -992,11 +944,7 @@
             <p>The use of commercial spray nozzles for amateur built rocket engines is highly
             recommended.</p>
 
-            <div id="figure-7" class="fig">
-                <div class="img"><img src="img/fig-7.svg" alt="figure-7" style="max-width: 510px;" /></div>
-                <span class="caption"><span class="fig-text">Figure 7</span> Fuel injectors for
-                Amateur Rocket Engines</span>
-            </div>
+            <Figure name="Figure 7" src="img/fig-7.svg" caption="Fuel injectors for amateur rocket engines." />
 
             <!-- CH 4.0 -->
             <h1 id="example-design-calculation">Example design calculation</h1>
@@ -1358,13 +1306,7 @@
             <p>The joining of the various engine components is especially critical since the
             engine will operate at high pressure and high temperature.</p>
 
-            <div id="figure-8" class="fig">
-                <div class="img"><img src="img/fig-8.svg" alt="figure-8" style="max-width: 510px;" /></div>
-                <span class="caption"><span class="fig-text">Figure 8</span> Assembly drawing of
-                small liquid-fuel rocket engine. (1) injector assembly, (2) O-ring, (3) liquid
-                fuel, (4) gaseous oxygen (5) engine mount, (6) coolant, (7) fuel spray nozzle,
-                (8) combustion chamber, (9) outer shell, (10) coolant.</span>
-            </div>
+            <Figure name="Figure 8" src="img/fig-8.svg" caption="Assembly drawing of small liquid-fuel rocket engine. (1) injector assembly, (2) O-ring, (3) liquid fuel, (4) gaseous oxygen (5) engine mount, (6) coolant, (7) fuel spray nozzle, (8) combustion chamber, (9) outer shell, (10) coolant." />
 
             <p>The ability of the welder, and the welding techniques employed, should be as good
             as those required for aircraft work. Metal joints must be clean, with a close fit
@@ -1466,14 +1408,7 @@
             <p>Figure <a class="figure-link" href="#figure-9">9</a> illustrates the relationship between an O-ring and a copper crush gasket
             and their mating surfaces.</p>
 
-            <div id="figure-9" class="fig">
-                <div class="img"><img src="img/fig-9.svg" alt="figure-9" style="max-width: 510px;" /></div>
-                <span class="caption"><span class="fig-text">Figure 9</span> Detail on O-ring
-                and crush gasket sealing methods. O-ring groove dimensions are critical and
-                should be obtained from suppliers handbooks. Crush gasket groove dimensions are
-                non-critical; groove depth should be about 1/3 the thickness of uncrushed
-                gasket.</span>
-            </div>
+            <Figure name="Figure 9" src="img/fig-9.svg" caption="Detail on O-ring and crush gasket sealing methods. O-ring groove dimensions are critical and should be obtained from suppliers handbooks. Crush gasket groove dimensions are non-critical; groove depth should be about 1/3 the thickness of uncrushed gasket." />
 
             <p>The injector should be fabricated from copper to provide maximum heat transfer
             from the injector face to the incoming propellants. The outer shell of the injector
@@ -1542,18 +1477,7 @@
             cylinders (see <a href="#bibliography">Bibliography</a>); the amateur is
             encouraged to read and follow these professional instructions.</p>
 
-            
-            <div id="figure-10" class="fig">
-                <div class="img"><img src="img/fig-10.svg" alt="figure-10" style="max-width: 510px;" /></div>
-                <span class="caption"><span class="fig-text">Figure 10</span>
-                Schematic diagram of gas pressure feed
-                system. Propellants are a liquid fuel and gaseous oxygen. (1) high
-                pressure gaseous nitrogen supply, (2) pressure regulator, (3) check
-                valve, (4) fuel tank, (5) gaseous oxygen cylinders, (6) relief valve,
-                (7) vent valve, (8) fill port, (9) drain valve, (10) remotely operated
-                propellant control valve, (11) fuel filter, (12) purge valve, (13)
-                rocket engine. P is pressure gauge.</span>
-            </div>
+            <Figure name="Figure 10" src="img/fig-10.svg" caption="Schematic diagram of gas pressure feed system. Propellants are a liquid fuel and gaseous oxygen. (1) high pressure gaseous nitrogen supply, (2) pressure regulator, (3) check valve, (4) fuel tank, (5) gaseous oxygen cylinders, (6) relief valve, (7) vent valve, (8) fill port, (9) drain valve, (10) remotely operated propellant control valve, (11) fuel filter, (12) purge valve, (13) rocket engine. P is pressure gauge." />
 
             <!-- CH 6.2.2 -->
             <h3 id="gaseous-nitrogen">Gaseous Nitrogen</h3>
@@ -1642,12 +1566,7 @@
             be incorporated as part of the gas inlet and fuel outlet plumbing so
             that only two ports, one on each end of the tank are required.</p>
 
-            <div id="figure-11" class="fig">
-                <div class="img"><img src="img/fig-11.svg" alt="figure-11" style="max-width: 510px;" /></div>
-                <span class="caption"><span class="fig-text">Figure 11</span>
-                Fuel tank end detail. Several weld passes should be
-                used to attach the end plates to the seamless tubing.</span>
-            </div>
+            <Figure name="Figure 11" src="img/fig-11.svg" caption="Fuel tank end detail. Several weld passes should be used to attach the end plates to the seamless tubing." />
 
             <p>Tanks made from seamless tubing should not be greater than six
             inches in diameter; wall stress is a function of diameter, and at high
@@ -1819,12 +1738,7 @@
             stand proper should be suitably barricaded to reduce shrapnel effect 
             in all directions.</p>
 
-
-            <div id="figure-12" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-12.png" alt="figure-12" /></div></div>
-                <span class="caption"><span class="fig-text">Figure 12</span>
-                Test stand for small liquid-fuel rocket engines.</span>
-            </div>
+            <Figure name="Figure 12" src="img/fig-12.png" caption="Test stand for small liquid-fuel rocket engines." />
 
             <p><a class="figure-link" href="#figure-12">Figure 12</a> shows schematically the
             proper arrangement of components for a safe rocket engine test stand. The rocket
@@ -2073,13 +1987,7 @@
             hot-source igniter. The ignition procedure, after the test stand is prepared for
             firing is:</p>
 
-            <div id="figure-13" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-13.png" alt="figure-13" /></div></div>
-                <span class="caption"><span class="fig-text">Figure 13</span>
-                Hot-source igniter for small liquid fuel rocket
-                engines using gaseous oxygen oxidizer. Ignitor is consumed during each
-                use and must be replaced.</span>
-            </div>
+            <Figure name="Figure 13" src="img/fig-13.png" caption="Hot-source igniter for small liquid fuel rocket engines using gaseous oxygen oxidizer. Ignitor is consumed during each use and must be replaced." />
 
             <ol>
                 <li>The operator ascertains that the area is clear and ready for

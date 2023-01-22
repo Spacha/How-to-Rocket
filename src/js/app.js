@@ -12,10 +12,12 @@ import Home from './components/Home.vue'
 import Cover from './components/Cover.vue'
 import BottomSticky from './components/BottomSticky.vue'
 import Figure from './components/Figure.vue'
+import Equation from './components/Equation.vue'
 
 Vue.component('Cover', Cover)
 Vue.component('BottomSticky', BottomSticky)
 Vue.component('Figure', Figure)
+Vue.component('Equation', Equation)
 /*
 Vue.component('NoConnectionToaster', NoConnectionToaster)
 Vue.component('ReactiveChart', ReactiveChart)

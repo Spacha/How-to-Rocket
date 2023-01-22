@@ -26679,12 +26679,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "fig", attrs: { id: "figure-8" } }, [
       _c("div", { staticClass: "img" }, [
-        _c("div", { staticClass: "img" }, [
-          _c("img", {
-            staticStyle: { "max-width": "510px" },
-            attrs: { src: "img/fig-8.svg", alt: "figure-8" }
-          })
-        ])
+        _c("img", {
+          staticStyle: { "max-width": "510px" },
+          attrs: { src: "img/fig-8.svg", alt: "figure-8" }
+        })
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "caption" }, [
@@ -26821,9 +26819,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "fig", attrs: { id: "figure-9" } }, [
       _c("div", { staticClass: "img" }, [
-        _c("div", { staticClass: "img" }, [
-          _c("img", { attrs: { src: "img/fig-9.png", alt: "figure-9" } })
-        ])
+        _c("img", {
+          staticStyle: { "max-width": "510px" },
+          attrs: { src: "img/fig-9.svg", alt: "figure-9" }
+        })
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "caption" }, [
@@ -26868,9 +26867,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "fig", attrs: { id: "figure-10" } }, [
       _c("div", { staticClass: "img" }, [
-        _c("div", { staticClass: "img" }, [
-          _c("img", { attrs: { src: "img/fig-10.png", alt: "figure-10" } })
-        ])
+        _c("img", {
+          staticStyle: { "max-width": "510px" },
+          attrs: { src: "img/fig-10.svg", alt: "figure-10" }
+        })
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "caption" }, [
@@ -26926,9 +26926,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "fig", attrs: { id: "figure-11" } }, [
       _c("div", { staticClass: "img" }, [
-        _c("div", { staticClass: "img" }, [
-          _c("img", { attrs: { src: "img/fig-11.png", alt: "figure-11" } })
-        ])
+        _c("img", {
+          staticStyle: { "max-width": "510px" },
+          attrs: { src: "img/fig-11.svg", alt: "figure-11" }
+        })
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "caption" }, [

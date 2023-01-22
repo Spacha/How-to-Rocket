@@ -1359,7 +1359,7 @@
             engine will operate at high pressure and high temperature.</p>
 
             <div id="figure-8" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-8.svg" alt="figure-8" style="max-width: 510px;" /></div></div>
+                <div class="img"><img src="img/fig-8.svg" alt="figure-8" style="max-width: 510px;" /></div>
                 <span class="caption"><span class="fig-text">Figure 8</span> Assembly drawing of
                 small liquid-fuel rocket engine. (1) injector assembly, (2) O-ring, (3) liquid
                 fuel, (4) gaseous oxygen (5) engine mount, (6) coolant, (7) fuel spray nozzle,
@@ -1467,7 +1467,7 @@
             and their mating surfaces.</p>
 
             <div id="figure-9" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-9.png" alt="figure-9" /></div></div>
+                <div class="img"><img src="img/fig-9.svg" alt="figure-9" style="max-width: 510px;" /></div>
                 <span class="caption"><span class="fig-text">Figure 9</span> Detail on O-ring
                 and crush gasket sealing methods. O-ring groove dimensions are critical and
                 should be obtained from suppliers handbooks. Crush gasket groove dimensions are
@@ -1544,7 +1544,7 @@
 
             
             <div id="figure-10" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-10.png" alt="figure-10" /></div></div>
+                <div class="img"><img src="img/fig-10.svg" alt="figure-10" style="max-width: 510px;" /></div>
                 <span class="caption"><span class="fig-text">Figure 10</span>
                 Schematic diagram of gas pressure feed
                 system. Propellants are a liquid fuel and gaseous oxygen. (1) high
@@ -1643,7 +1643,7 @@
             that only two ports, one on each end of the tank are required.</p>
 
             <div id="figure-11" class="fig">
-                <div class="img"><div class="img"><img src="img/fig-11.png" alt="figure-11" /></div></div>
+                <div class="img"><img src="img/fig-11.svg" alt="figure-11" style="max-width: 510px;" /></div>
                 <span class="caption"><span class="fig-text">Figure 11</span>
                 Fuel tank end detail. Several weld passes should be
                 used to attach the end plates to the seamless tubing.</span>

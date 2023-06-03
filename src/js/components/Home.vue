@@ -557,7 +557,7 @@
             <Equation name="T_t_val" label="9" />
 
             <p><i>T<sub>c</sub></i> is the combustion chamber flame temperature in <span v-if="unitSystem == 'US'">degrees Rankine
-            (°R)</span><span v-else>degrees Celsius (°C)</span>, given by</p>
+            (°R)</span><span v-else>kelvins (K)</span>, given by</p>
 
             <!-- T (degR) = T (°F) + 460    (10) -->
             <Equation name="T_c_val" label="10" :units="unitSystem" />

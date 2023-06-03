@@ -1,29 +1,21 @@
-import Vue from 'vue'
-import VueKatex from 'vue-katex'
+import { createApp } from 'vue';
+
+import VueKatex from './plugins/vue-katex/vue-katex';
+
+//import VueKatex from 'vue-katex';
 
 // Stylesheets
-//import 'katex/dist/katex.min.css'
+//import 'katex/dist/katex.min.css';
 // If you wanna use BS, you need jquery, yak!
-// import 'bootstrap'
+// import 'bootstrap';
 
 // Import components
-import Home from './components/Home.vue'
+import Home from './components/Home.vue';
 
-import Cover from './components/Cover.vue'
-import BottomSticky from './components/BottomSticky.vue'
-import Figure from './components/Figure.vue'
-import Equation from './components/Equation.vue'
-
-Vue.component('Cover', Cover)
-Vue.component('BottomSticky', BottomSticky)
-Vue.component('Figure', Figure)
-Vue.component('Equation', Equation)
-/*
-Vue.component('NoConnectionToaster', NoConnectionToaster)
-Vue.component('ReactiveChart', ReactiveChart)
-Vue.component('TestChart2', TestChart2)
-Vue.component('TestChart', TestChart)
-*/
+import Cover from './components/Cover.vue';
+import BottomSticky from './components/BottomSticky.vue';
+import Figure from './components/Figure.vue';
+import Equation from './components/Equation.vue';
 
 // Import styles
 // import '../sass/app.scss'
@@ -38,13 +30,29 @@ Object.defineProperty(String.prototype, 'capitalize', {
   enumerable: false
 });
 
-Vue.use(VueKatex, {
-	globalOptions: {
-		// Global KaTeX options here...
-	}
-})
+// Vue.use(VueKatex, {
+// 	globalOptions: {
+// 		// Global KaTeX options here...
+// 	}
+// })
 
 // Create the application
-new Vue({
-	render: h => h(Home),
-}).$mount("#app");
+// new Vue({
+// 	render: h => h(Home),
+// }).$mount("#app");
+const app = createApp(Home);
+
+// register app-scoped components
+app.component('Cover', Cover);
+app.component('BottomSticky', BottomSticky);
+app.component('Figure', Figure);
+app.component('Equation', Equation);
+
+// register plugins
+app.use(VueKatex, {
+  globalOptions: {
+    /* Katex global options here... */
+  }
+});
+
+app.mount('#app');

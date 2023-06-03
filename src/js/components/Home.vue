@@ -483,13 +483,13 @@
                 <p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
                 standard can be determined from</i><br />
                 <i>ρ<sub>2</sub></i> = <i>ρ<sub>1</sub></i> (<i>P<sub>2</sub></i>/<i>P<sub>1</sub></i>)(<i>T<sub>1</sub></i>/<i>T<sub>2</sub></i>),
-                <i>where</i> <i>P<sub>1</sub></i> = 14.7 psi, <i>T<sub>1</sub></i> = 68 °F, <i>ρ<sub>1</sub></i> = 0.083 lb/ft<sup>3</sup>.</i></p>
+                <i>where</i> <i>P<sub>1</sub></i> = 14.7 psi, <i>T<sub>1</sub></i> = 68 °F, <i>ρ<sub>1</sub></i> = 0.083 lb/ft<sup>3</sup>.</p>
             </span>
             <span v-else>
                 <p><i><strong>Note:</strong> The density of gaseous oxygen at conditions other than
                 standard can be determined from</i><br />
                 <i>ρ<sub>2</sub></i> = <i>ρ<sub>1</sub></i> (<i>P<sub>2</sub></i>/<i>P<sub>1</sub></i>)(<i>T<sub>1</sub></i>/<i>T<sub>2</sub></i>),
-                <i>where</i> <i>P<sub>1</sub></i> = 101.3 kPa, <i>T<sub>1</sub></i> = 20 °C, <i>ρ<sub>1</sub></i> = 1.330 kg/m<sup>3</sup>.</i></p>
+                <i>where</i> <i>P<sub>1</sub></i> = 101.3 kPa, <i>T<sub>1</sub></i> = 20 °C, <i>ρ<sub>1</sub></i> = 1.330 kg/m<sup>3</sup>.</p>
             </span>
 
             <!-- CH 3.0 -->
@@ -720,7 +720,6 @@
 
             <!-- Vc = 1.1 (AcLc)        (22) -->
             <Equation name="V_c2" label="22" />
-            </pre></p>
 
             <span v-if="unitSystem=='US'">
                 <p>The chamber diameter for small combustion chambers (thrust level less than 75 lbs)
@@ -1058,7 +1057,7 @@
             assuming that the chamber diameter is five times the nozzle throat diameter or
             D<sub>c</sub> = 5D<sub>t</sub>,</p>
 
-            <p>therefore D<sub>c</sub> = 1.2 in. and A<sub>c</sub> = 1.13 in<sup>2</sup></p></p>
+            <p>therefore D<sub>c</sub> = 1.2 in. and A<sub>c</sub> = 1.13 in<sup>2</sup></p>
 
             <p>Therefore,</p>
 
@@ -2697,7 +2696,6 @@
         </div>
 
         <BottomSticky :unitSystem="unitSystem" v-on:switch-units="switchUnits" />
-    </ul>
     </div>
 
 </template>

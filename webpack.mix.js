@@ -9,7 +9,7 @@ let sourcePath = 'src';
 let publicPath = 'dist';
 
 mix
-	.js(sourcePath + '/js/app.js', publicPath + '/js/').vue()
-	.sass(sourcePath + '/sass/app.scss', publicPath + '/css/')
+	.sass(sourcePath + '/sass/app.scss', 'css')
+	.js(sourcePath + '/js/app.js', 'js').vue()
 	.setPublicPath(publicPath)
 	.version();

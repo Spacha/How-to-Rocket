@@ -190,34 +190,27 @@ div.bottom-sticky {
     position: fixed;
     bottom: 10px;
     right: 10px;
-}
 
-div.bottom-sticky div {
-    background: #eee;
-    border: 1px solid #dadada;
-    border-radius: 3px;
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    div {
+        background: #eee;
+        border: 1px solid #dadada;
+        border-radius: 3px;
+        box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    
+        display: inline-block; 
 
-    display: inline-block;
-}
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
 
-div.bottom-sticky div a {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: block;
-    color: #888;
-}
-
-div.si-us {
-    /* ... */
-}
-
-div.back-to-top {
-    /* ... */
-}
-    div.back-to-top a {
-        /* ... */
+        a {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            color: #888;
+        }
     }
+}
 
 
 /* COLUMNS */
